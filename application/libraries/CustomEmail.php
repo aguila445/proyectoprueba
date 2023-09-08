@@ -12,17 +12,17 @@ class CustomEmail
 
         // Configuración del correo electrónico (ajusta según tu servidor de correo)
         $config['protocol'] = 'smtp';
-        $config['smtp_host'] = 'tu_servidor_smtp';
-        $config['smtp_port'] = 587;
-        $config['smtp_user'] = 'tu_correo_electronico';
-        $config['smtp_pass'] = 'tu_contraseña_de_correo';
+        $config['smtp_host'] = 'localhost';
+        $config['smtp_port'] = 25;
+        $config['smtp_user'] = '';
+        $config['smtp_pass'] = '';
         $config['mailtype'] = 'html';
         $this->ci->email->initialize($config);
     }
 
     public function enviarCorreo($destinatario, $asunto, $mensaje)
     {
-        $this->ci->email->from('tu_correo_electronico', 'Tu Nombre');
+        $this->ci->email->from('agandeiby', 'deiby');
         $this->ci->email->to($destinatario);
         $this->ci->email->subject($asunto);
         $this->ci->email->message($mensaje);
