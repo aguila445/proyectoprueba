@@ -30,7 +30,7 @@
               <div class="card-body">
               <h1>Registro de Usuarios</h1>
 
-<?php echo form_open('usuarios/registrar'); ?>
+<?php echo form_open('usuario/registrar'); ?>
 
 <label for="nombre">Nombre :</label>
 <input type="text" name="nombre" id="nombre" placeholder="Escriba el nombre" class="form-control" required>

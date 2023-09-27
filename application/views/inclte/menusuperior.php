@@ -1,137 +1,228 @@
- <!-- Navbar -->
- <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="../../index3.html" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
-      </li>
-    </ul>
-
-    <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
-      <!-- Navbar Search -->
-      <li class="nav-item">
-        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
-          <i class="fas fa-search"></i>
-        </a>
-        <div class="navbar-search-block">
-          <form class="form-inline">
-            <div class="input-group input-group-sm">
-              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-              <div class="input-group-append">
-                <button class="btn btn-navbar" type="submit">
-                  <i class="fas fa-search"></i>
-                </button>
-                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                  <i class="fas fa-times"></i>
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </li>
-
-      <!-- Messages Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-comments"></i>
-          <span class="badge badge-danger navbar-badge">3</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="../../dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Brad Diesel
-                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">Call me whenever you can...</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="../../dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  John Pierce
-                  <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">I got your message bro</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="../../dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Nora Silvester
-                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">The subject goes here</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
-        </div>
-      </li>
-      <!-- Notifications Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-bell"></i>
-          <span class="badge badge-warning navbar-badge">15</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <span class="dropdown-item dropdown-header">15 Notifications</span>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-envelope mr-2"></i> 4 new messages
-            <span class="float-right text-muted text-sm">3 mins</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-users mr-2"></i> 8 friend requests
-            <span class="float-right text-muted text-sm">12 hours</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-file mr-2"></i> 3 new reports
-            <span class="float-right text-muted text-sm">2 days</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-expand-arrows-alt"></i>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-          <i class="fas fa-th-large"></i>
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <!-- /.navbar -->
+<main class="page-content content-wrap">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="sidebar-pusher">
+                        <a href="javascript:void(0);" class="waves-effect waves-button waves-classic push-sidebar">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+                    <div class="logo-box">
+                        <a href="index.html" class="logo-text"><span>Modern</span></a>
+                    </div><!-- Logo Box -->
+                    <div class="search-button">
+                        <a href="javascript:void(0);" class="waves-effect waves-button waves-classic show-search"><i class="fa fa-search"></i></a>
+                    </div>
+                    <div class="topmenu-outer">
+                        <div class="top-menu">
+                            <ul class="nav navbar-nav navbar-left">
+                                <li>		
+                                    <a href="javascript:void(0);" class="waves-effect waves-button waves-classic sidebar-toggle"><i class="fa fa-bars"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#cd-nav" class="waves-effect waves-button waves-classic cd-nav-trigger"><i class="fa fa-diamond"></i></a>
+                                </li>
+                                <li>		
+                                    <a href="javascript:void(0);" class="waves-effect waves-button waves-classic toggle-fullscreen"><i class="fa fa-expand"></i></a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle waves-effect waves-button waves-classic" data-toggle="dropdown">
+                                        <i class="fa fa-cogs"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-md dropdown-list theme-settings" role="menu">
+                                        <li class="li-group">
+                                            <ul class="list-unstyled">
+                                                <li class="no-link" role="presentation">
+                                                    Fixed Header 
+                                                    <div class="ios-switch pull-right switch-md">
+                                                        <input type="checkbox" class="js-switch pull-right fixed-header-check" checked>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="li-group">
+                                            <ul class="list-unstyled">
+                                                <li class="no-link" role="presentation">
+                                                    Fixed Sidebar 
+                                                    <div class="ios-switch pull-right switch-md">
+                                                        <input type="checkbox" class="js-switch pull-right fixed-sidebar-check">
+                                                    </div>
+                                                </li>
+                                                <li class="no-link" role="presentation">
+                                                    Horizontal bar 
+                                                    <div class="ios-switch pull-right switch-md">
+                                                        <input type="checkbox" class="js-switch pull-right horizontal-bar-check">
+                                                    </div>
+                                                </li>
+                                                <li class="no-link" role="presentation">
+                                                    Toggle Sidebar 
+                                                    <div class="ios-switch pull-right switch-md">
+                                                        <input type="checkbox" class="js-switch pull-right toggle-sidebar-check">
+                                                    </div>
+                                                </li>
+                                                <li class="no-link" role="presentation">
+                                                    Compact Menu 
+                                                    <div class="ios-switch pull-right switch-md">
+                                                        <input type="checkbox" class="js-switch pull-right compact-menu-check">
+                                                    </div>
+                                                </li>
+                                                <li class="no-link" role="presentation">
+                                                    Hover Menu 
+                                                    <div class="ios-switch pull-right switch-md">
+                                                        <input type="checkbox" class="js-switch pull-right hover-menu-check">
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="li-group">
+                                            <ul class="list-unstyled">
+                                                <li class="no-link" role="presentation">
+                                                    Boxed Layout 
+                                                    <div class="ios-switch pull-right switch-md">
+                                                        <input type="checkbox" class="js-switch pull-right boxed-layout-check">
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="li-group">
+                                            <ul class="list-unstyled">
+                                                <li class="no-link" role="presentation">
+                                                    Choose Theme Color
+                                                    <div class="color-switcher">
+                                                        <a class="colorbox color-blue" href="?theme=blue" title="Blue Theme" data-css="blue"></a>
+                                                        <a class="colorbox color-green" href="?theme=green" title="Green Theme" data-css="green"></a>
+                                                        <a class="colorbox color-red" href="?theme=red" title="Red Theme" data-css="red"></a>
+                                                        <a class="colorbox color-white" href="?theme=white" title="White Theme" data-css="white"></a>
+                                                        <a class="colorbox color-purple" href="?theme=purple" title="purple Theme" data-css="purple"></a>
+                                                        <a class="colorbox color-dark" href="?theme=dark" title="Dark Theme" data-css="dark"></a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="no-link"><button class="btn btn-default reset-options">Reset Options</button></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>	
+                                    <a href="javascript:void(0);" class="waves-effect waves-button waves-classic show-search"><i class="fa fa-search"></i></a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle waves-effect waves-button waves-classic" data-toggle="dropdown"><i class="fa fa-envelope"></i><span class="badge badge-success pull-right">4</span></a>
+                                    <ul class="dropdown-menu title-caret dropdown-lg" role="menu">
+                                        <li><p class="drop-title">You have 4 new  messages !</p></li>
+                                        <li class="dropdown-menu-list slimscroll messages">
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="msg-img"><div class="online on"></div><img class="img-circle" src="assets/images/avatar2.png" alt=""></div>
+                                                        <p class="msg-name">Sandra Smith</p>
+                                                        <p class="msg-text">Hey ! I'm working on your project</p>
+                                                        <p class="msg-time">3 minutes ago</p>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="msg-img"><div class="online off"></div><img class="img-circle" src="assets/images/avatar4.png" alt=""></div>
+                                                        <p class="msg-name">Amily Lee</p>
+                                                        <p class="msg-text">Hi David !</p>
+                                                        <p class="msg-time">8 minutes ago</p>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="msg-img"><div class="online off"></div><img class="img-circle" src="assets/images/avatar3.png" alt=""></div>
+                                                        <p class="msg-name">Christopher Palmer</p>
+                                                        <p class="msg-text">See you soon !</p>
+                                                        <p class="msg-time">56 minutes ago</p>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="msg-img"><div class="online on"></div><img class="img-circle" src="assets/images/avatar5.png" alt=""></div>
+                                                        <p class="msg-name">Nick Doe</p>
+                                                        <p class="msg-text">Nice to meet you</p>
+                                                        <p class="msg-time">2 hours ago</p>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="msg-img"><div class="online on"></div><img class="img-circle" src="assets/images/avatar2.png" alt=""></div>
+                                                        <p class="msg-name">Sandra Smith</p>
+                                                        <p class="msg-text">Hey ! I'm working on your project</p>
+                                                        <p class="msg-time">5 hours ago</p>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="msg-img"><div class="online off"></div><img class="img-circle" src="assets/images/avatar4.png" alt=""></div>
+                                                        <p class="msg-name">Amily Lee</p>
+                                                        <p class="msg-text">Hi David !</p>
+                                                        <p class="msg-time">9 hours ago</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="drop-all"><a href="#" class="text-center">All Messages</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle waves-effect waves-button waves-classic" data-toggle="dropdown"><i class="fa fa-bell"></i><span class="badge badge-success pull-right">3</span></a>
+                                    <ul class="dropdown-menu title-caret dropdown-lg" role="menu">
+                                        <li><p class="drop-title">You have 3 pending tasks !</p></li>
+                                        <li class="dropdown-menu-list slimscroll tasks">
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="task-icon badge badge-success"><i class="icon-user"></i></div>
+                                                        <span class="badge badge-roundless badge-default pull-right">1min ago</span>
+                                                        <p class="task-details">New user registered.</p>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="task-icon badge badge-danger"><i class="icon-energy"></i></div>
+                                                        <span class="badge badge-roundless badge-default pull-right">24min ago</span>
+                                                        <p class="task-details">Database error.</p>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="task-icon badge badge-info"><i class="icon-heart"></i></div>
+                                                        <span class="badge badge-roundless badge-default pull-right">1h ago</span>
+                                                        <p class="task-details">Reached 24k likes</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="drop-all"><a href="#" class="text-center">All Tasks</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle waves-effect waves-button waves-classic" data-toggle="dropdown">
+                                        <span class="user-name">David<i class="fa fa-angle-down"></i></span>
+                                        <img class="img-circle avatar" src="assets/images/avatar1.png" width="40" height="40" alt="">
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-list" role="menu">
+                                        <li role="presentation"><a href="profile.html"><i class="fa fa-user"></i>Profile</a></li>
+                                        <li role="presentation"><a href="calendar.html"><i class="fa fa-calendar"></i>Calendar</a></li>
+                                        <li role="presentation"><a href="inbox.html"><i class="fa fa-envelope"></i>Inbox<span class="badge badge-success pull-right">4</span></a></li>
+                                        <li role="presentation" class="divider"></li>
+                                        <li role="presentation"><a href="lock-screen.html"><i class="fa fa-lock"></i>Lock screen</a></li>
+                                        <li role="presentation"><a href="login.html"><i class="fa fa-sign-out m-r-xs"></i>Log out</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="login.html" class="log-out waves-effect waves-button waves-classic">
+                                        <span><i class="fa fa-sign-out m-r-xs"></i>Log out</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="waves-effect waves-button waves-classic" id="showRight">
+                                        <i class="fa fa-comments"></i>
+                                    </a>
+                                </li>
+                            </ul><!-- Nav -->
+                        </div><!-- Top Menu -->
+                    </div>
+                </div>
+            </div><!-- Navbar -->

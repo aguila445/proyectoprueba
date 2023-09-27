@@ -5,7 +5,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Lista de estudiante</h1>
+            <h1>LISTA DE FRATERNOS</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -24,7 +24,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title"> Modificar estudiante</h3>
+                <h3 class="card-title"> Modificar fraterno</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -32,14 +32,14 @@
                 <?php
                 foreach($infProducto->result()as $row)
                 {
-                    echo form_open_multipart('estudiante/modificardb')
+                    echo form_open_multipart('fraterno/modificardb')
                 ?>
-                    <input type="hidden" name="idEstudiante" id=""class="form-control" value="<?php echo $row->idEstudiante;?>">
+                    <input type="hidden" name="idFraterno" id=""class="form-control" value="<?php echo $row->idFraterno;?>">
                     <input type="text" name="nombre" id="" placeholder="Escriba el nombre" class="form-control" value="<?php echo $row->nombre;?>">
                     <input type="text" name="apellido1" id="" placeholder="Escriba el primer apellido" class="form-control" value="<?php echo $row->apellido1;?>">
                     <input type="text" name="apellido2" id="" placeholder="Escriba el segundo apellido" class="form-control" value="<?php echo $row->apellido2;?>">
                     <input type="text" name="nota" id="" placeholder="Escriba el numero de movil" class="form-control" value="<?php echo $row->nota;?>">
-                    <button type="submit" class="btn btn-primary">Modificar</button>
+                    <button type="submit" class="btn btn-primary">modificar</button>
                 <?php
                   echo form_close();
                 }

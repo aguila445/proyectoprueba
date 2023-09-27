@@ -30,7 +30,7 @@
               <div class="card-body">
     <h1>Recuperar Contraseña</h1>
 
-    <?php echo form_open('usuarios/enviar_recuperacion'); ?>
+    <?php echo form_open('usuario/enviar_recuperacion'); ?>
 
     <div class="form-group">
         <label for="email">Correo Electrónico:</label>
@@ -43,7 +43,7 @@
 
     <?php echo form_close(); ?>
 
-    <p><a href="<?php echo site_url('usuarios/index'); ?>">Volver al Inicio de Sesión</a></p>
+    <p><a href="<?php echo site_url('usuario/index'); ?>">Volver al Inicio de Sesión</a></p>
 </div>
 
               <!-- /.card-body -->

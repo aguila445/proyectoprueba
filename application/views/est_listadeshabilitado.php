@@ -24,9 +24,9 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title"> Lista de estudiante deshabilitados </h3>
+                <h3 class="card-title"> Lista de fraterno deshabilitados </h3>
                 <br>
-                <a href="<?php echo base_url(); ?>index.php/estudiante/indexlte">
+                <a href="<?php echo base_url(); ?>index.php/fraterno/indexlte">
                     <button type="button" class="btn btn-warning">Ver lista habilitados</button>
                 </a>
               </div>
@@ -47,7 +47,7 @@
                   <tbody>
                     <?php
                     $indice=1;
-                    foreach($estudiante->result() as $row)
+                    foreach($fraterno->result() as $row)
                     {
                     ?>
                     <tr>
@@ -58,9 +58,9 @@
                         <td><?php echo $row->nota;?></td>
                         <td>
                             <?php
-                                echo form_open_multipart('estudiante/habilitarbd');
+                                echo form_open_multipart('fraterno/habilitarbd');
                             ?>
-                                <input type="hidden" name="idEstudiante" value="<?php echo $row->idEstudiante; ?>">
+                                <input type="hidden" name="idFraterno" value="<?php echo $row->idFraterno; ?>">
                                 <button type="submit" class="btn btn-warning">HABILITAR</button>        
                             <?php
                                 echo form_close();

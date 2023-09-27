@@ -4,7 +4,7 @@
         public function validar($login,$password)
         {
             $this->db->select('*');
-            $this->db->from('usuarios');
+            $this->db->from('usuario');
             $this->db->where('login',$login);
             $this->db->where('password',$password);
             return $this->db->get();
@@ -12,13 +12,13 @@
         
         public function registrarNuevoUsuario($data)
         {
-            $this->db->insert('usuarios', $data);
+            $this->db->insert('usuario', $data);
         }
         
         public function obtenerUsuarioPorEmail($email)
         {
         $this->db->select('*');
-        $this->db->from('usuarios');
+        $this->db->from('usuario');
         $this->db->where('email', $email);
         return $this->db->get()->row();
         }
@@ -28,6 +28,6 @@
         $data = array('password' => $nuevaPassword);
 
         $this->db->where('idUsuario', $idUsuario);
-        $this->db->update('usuarios', $data);
+        $this->db->update('usuario', $data);
         }
     }

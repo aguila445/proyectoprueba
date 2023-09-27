@@ -24,18 +24,18 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title"> Lista de estudiante deshabilitados</h3>
+                <h3 class="card-title"> Lista de fraterno deshabilitados</h3>
                 <br>
                 <h3 class="card-title"> productos habilitados </h3>
                 <br>
-                <a href="<?php echo base_url(); ?>index.php/usuarios/logout">
+                <a href="<?php echo base_url(); ?>index.php/usuario/logout">
                   <button type="button" class="btn btn-warning">Cerrar sesion</button>
                 </a>
 <br>
 <h3>
   login:<?php echo $this->session->userdata('login');?><br>
-  id:<?php echo $this->session->userdata('idusuario');?><br>
-  tipo:<?php echo $this->session->userdata('tipo');?><br>
+  id:<?php echo $this->session->userdata('idUsuario');?><br>
+  rol:<?php echo $this->session->userdata('rol');?><br>
 </h3>
               </div>
               <!-- /.card-header -->

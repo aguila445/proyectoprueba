@@ -29,9 +29,9 @@
               <!-- /.card-header -->
               <div class="card-body">
                 <?php
-                    echo form_open_multipart('estudiante/subir')
+                    echo form_open_multipart('fraterno/subir')
                 ?>
-                    <input type="hidden" name="idEstudiante"  value="<?php echo $idEstudiante; ?>">
+                    <input type="hidden" name="idFraterno"  value="<?php echo $idFraterno; ?>">
                     <input type="file" name="userfile"  class="form-control">
                     <br>
                     <button type="submit" class="btn btn-primary">SUBIR</button>

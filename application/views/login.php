@@ -25,7 +25,7 @@
       <p class="login-box-msg">INICIO DE SESION</p>
       <!-- inicioooo para cambiar -->
 <?php
-echo form_open_multipart('usuarios/validarusuario',array('id'=>'form1','class'=>'needs-validation','method'=>'post'));
+echo form_open_multipart('usuario/validarusuario',array('id'=>'form1','class'=>'needs-validation','method'=>'post'));
 ?>
         <div class="input-group mb-3">
           <input type="text" class="form-control" placeholder="login" name="login">
@@ -67,9 +67,9 @@ echo form_close();
       <!-- fin de cambio -->
       <div class="social-auth-links text-center mb-3">
         <p>- OR -</p>
-        <a href="#" class="btn btn-block btn-primary">
-          <i class="fab fa-facebook mr-2"></i> no tocar
-        </a>
+        <p class="mb-1">
+    <a href="<?php echo base_url('application/views/menu.php'); ?>">¿Olvidaste tu contraseña?</a>
+</p>
         <a href="#" class="btn btn-block btn-danger">
           <i class="fab fa-google-plus mr-2"></i> deshabilitado
         </a>
@@ -77,10 +77,10 @@ echo form_close();
       <!-- /.social-auth-links -->
 
       <p class="mb-1">
-    <a href="<?php echo base_url('index.php/usuarios/recuperar_password'); ?>">¿Olvidaste tu contraseña?</a>
+    <a href="<?php echo base_url('index.php/usuario/recuperar_password'); ?>">¿Olvidaste tu contraseña?</a>
 </p>
 <p class="mb-0">
-    <a href="<?php echo base_url('index.php/usuarios/registrar'); ?>" class="text-center">Registrar nuevo usuario</a>
+    <a href="<?php echo base_url('index.php/usuario/registrar'); ?>" class="text-center">Registrar nuevo usuario</a>
 </p>
     </div>
     <!-- /.login-card-body -->
