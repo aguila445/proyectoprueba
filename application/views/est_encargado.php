@@ -5,7 +5,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Subir foto</h1>
+            <h1>VISTA DE ENCARGADO</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -24,23 +24,24 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title"> Adjunte una foto </h3>
+                <h3 class="card-title"> Lista de fraterno deshabilitados</h3>
+                <br>
+                <h3 class="card-title"> productos habilitados </h3>
+                <br>
+                <a href="<?php echo base_url(); ?>index.php/usuario/logout">
+                  <button type="button" class="btn btn-warning">Cerrar sesion</button>
+                </a>
+<br>
+<h3>
+  login:<?php echo $this->session->userdata('login');?><br>
+  id:<?php echo $this->session->userdata('idUsuario');?><br>
+  rol:<?php echo $this->session->userdata('rol');?><br>
+</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <?php
-                    echo form_open_multipart('fraterno/subir')
-                ?>
-                    <input type="hidden" name="idFraterno"  value="<?php echo $idFraterno; ?>">
-                    <input type="file" name="userfile"  class="form-control">
-                    <br>
-                    <button type="submit" class="btn btn-primary">SUBIR</button>
-                <?php
-                echo form_close()
-                ?>
-                <?php    
-                // </form>
-                ?>
+                <!-- /todo depues del body -->
+                
               </div>
               <!-- /.card-body -->
             </div>
@@ -55,3 +56,4 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+

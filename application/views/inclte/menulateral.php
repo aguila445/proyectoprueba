@@ -4,10 +4,10 @@
                         <div class="sidebar-profile">
                             <a href="javascript:void(0);" id="profile-menu-link">
                                 <div class="sidebar-profile-image">
-                                    <img src="<?php echo base_url();?>adminlte/assets/images/profile-menu-image.png" class="img-circle img-responsive" alt="">
+                                    <img src="<?php echo base_url();?>adminlte/assets/images/logo.png" class="img-circle img-responsive" alt="">
                                 </div>
                                 <div class="sidebar-profile-details">
-                                    <span>David Green<br><small>Art Director</small></span>
+                                    <span>SALAY BOLIVIA<br><small>za za zapateadito!!!</small></span>
                                 </div>
                             </a>
                         </div>

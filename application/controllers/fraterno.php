@@ -39,7 +39,7 @@ class Fraterno extends CI_Controller
     {
         if ($this->session->userdata('login')) {
             $idFraterno = $_POST['idFraterno'];
-            $nombreArchivo = $idFraterno . ".jpg";
+            $nombreArchivo = $idFraterno . ".png";
 
             $config['upload_path'] = './uploads/fraterno/';
             $config['file_name'] = $nombreArchivo;
@@ -49,7 +49,7 @@ class Fraterno extends CI_Controller
                 unlink($direccion);
             }
 
-            $config['allowed_types'] = 'jpg';
+            $config['allowed_types'] = 'png';
             $this->load->library('upload', $config);
 
             if (!$this->upload->do_upload()) {
@@ -158,6 +158,19 @@ class Fraterno extends CI_Controller
             $this ->load->view('inclte/menusuperior');
             $this ->load->view('inclte/menulateral');
             $this->load->view('est_invitado');
+            $this->load->view('inclte/pie');
+        } else {
+            redirect('usuario/index/2', 'refresh');
+        }
+    }
+
+    public function encargadolte()
+    {
+        if ($this->session->userdata('login')) {
+            $this ->load->view('inclte/cabecera');
+            $this ->load->view('inclte/menusuperior');
+            $this ->load->view('inclte/menulateral');
+            $this->load->view('est_encargado');
             $this->load->view('inclte/pie');
         } else {
             redirect('usuario/index/2', 'refresh');

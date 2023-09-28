@@ -24,7 +24,12 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title"> LISTA DE FRATERNOS </h3>
+                
+              <h4>
+              login:<?php echo $this->session->userdata('login');?><br>
+            <!--  id:<?php echo $this->session->userdata('idUsuario');?><br>-->
+              rol:<?php echo $this->session->userdata('rol');?><br>
+            </h4>
                 <br>
                 <a href="<?php echo base_url();?>index.php/fraterno/agregar">
                     <button type="button" class="btn btn-primary">CREAR FRATERNO</button>
@@ -35,18 +40,18 @@
                 <a href="<?php echo base_url(); ?>index.php/usuario/logout">
                   <button type="button" class="btn btn-warning">CERRAR SESION</button>
                 </a>
-            <br>
-            <h3>
-              login:<?php echo $this->session->userdata('login');?><br>
-              id:<?php echo $this->session->userdata('idUsuario');?><br>
-              rol:<?php echo $this->session->userdata('rol');?><br>
-            </h3>
-              </div>
-              
+                </div>
+                <div>
                 <a href="<?php echo base_url();?>index.php/estdudiantelistaxls2" target="blank">
                 <button type="submit" class="btn btn-success">EXCEL</button>        
                 </a>
+                </div>
+            <br>
 
+
+
+
+            <h3 class="card-title"> LISTA DE FRATERNOS </h3>
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example1" class="table table-bordered table-striped">
@@ -57,14 +62,13 @@
                       <th>primer ap.</th>
                       <th>segundo ap. </th>
                       <th>nota</th>
-                       
                       <th>foto</th>
-                      
                       <th>Modificar</th>
+                      <th>Deshabilitar</th>
                       <th>Eliminar</th>
-                      <th>deshabilitar</th>
                     </tr>
                     </thead>
+
                     <tbody>
                     <?php
                     $indice=1;//CONTADOR CORRELATIVO
@@ -78,7 +82,8 @@
                           <td><?php echo $row->nombre;?></td>
                           <td><?php echo $row->primerApellido;?></td>
                           <td><?php echo $row->segundoApellido;?></td>
-                          <td><?php echo $row->foto;?></td>
+                          <td><?php echo $row->nota;?></td>
+                         
                          
                           <!--Se ocupa subir fotos-->
                           <td>
@@ -86,11 +91,11 @@
                                     $foto = $row->foto;
                                     if ($foto == "") {
                                     ?>
-                                        <img width="100" src="<?php echo base_url(); ?>uploads/fraternos/perfil.jpg">
+                                        <img width="50" src="<?php echo base_url(); ?>uploads/fraternos/mod.png">
                                     <?php
                                     } else {
                                     ?>
-                                        <img width="100" src="<?php echo base_url(); ?>uploads/fraternos/<?php echo $foto; ?>">
+                                        <img width="50" src="<?php echo base_url(); ?>uploads/fraternos/<?php echo $foto; ?>">
                                     <?php
                                     }
                                     ?>
@@ -108,8 +113,7 @@
                                 <!--final para fotos-->
 
                          <!-- <td> <!?php echo formatearFecha($row->creado);?></td> -->
-
-                          <td>
+                            <td>
                                 <?php
                                     echo form_open_multipart('fraterno/modificar')
                                 ?>
@@ -121,7 +125,17 @@
                                     echo form_close()
                                 ?> 
                           </td>
-
+                          <td>
+                                <?php
+                                    echo form_open_multipart('fraterno/deshabilitarbd');
+                                ?>
+                                  <input type="hidden" name="idFraterno" value="<?php echo $row->idFraterno; ?>">
+                                  <button type="submit" class="btn btn-warning">deshabilitar</button>        
+                                <?php
+                                    echo form_close();
+                                ?>  
+                                      
+                          </td>
                           <td>
                                 <?php
                                     echo form_open_multipart('fraterno/eliminardb')
@@ -134,16 +148,6 @@
                                 ?> 
                           </td>
 
-                          <td>
-                                <?php
-                                    echo form_open_multipart('fraterno/deshabilitarbd');
-                                ?>
-                                  <input type="hidden" name="idFraterno" value="<?php echo $row->idFraterno; ?>">
-                                  <button type="submit" class="btn btn-warning">deshabilitar</button>        
-                                <?php
-                                    echo form_close();
-                                ?>        
-                          </td>
                         </tr>
                     <?php
                     $indice++;

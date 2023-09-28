@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Usuarios extends CI_Controller
+class Usuario extends CI_Controller
 {
     public function index()
     {
@@ -36,7 +36,7 @@ class Usuarios extends CI_Controller
     {
         if ($this->session->userdata('login')) {
             $rol=$this->session->userdata('rol');
-            if ($rol=='admi') {
+            if ($rol=='administrador') {
                 redirect('fraterno/indexlte', 'refresh');
             }
             else {
@@ -46,6 +46,7 @@ class Usuarios extends CI_Controller
             redirect('usuario/index/2', 'refresh');
         }
     }
+    
     public function logout()
     {
         $this->session->sess_destroy();

@@ -26,7 +26,7 @@
               <div class="card-header">
                 <h3 class="card-title"> Lista de fraterno deshabilitados</h3>
                 <br>
-                <h3 class="card-title"> productos habilitados </h3>
+                <h3 class="card-title"> VISTA DE Fraterno </h3>
                 <br>
                 <a href="<?php echo base_url(); ?>index.php/usuario/logout">
                   <button type="button" class="btn btn-warning">Cerrar sesion</button>
