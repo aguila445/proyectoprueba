@@ -5,7 +5,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Lista de paises</h1>
+            <h1>FORMULARIO DE PRODUCTO</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -24,28 +24,29 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title"> Lista de fraterno deshabilitados</h3>
-                <br>
-                <h3 class="card-title"> VISTA DE FRATERNO </h3>
+                <h3 class="card-title"> FORMULARIO DE CREACION DE PRODUCTO </h3>
                 <br>
                 <a href="<?php echo base_url(); ?>index.php/fraterno/indexlte">
                     <button type="button" class="btn btn-warning">IR HOME</button>
                 </a>
-                <br>
-                <a href="<?php echo base_url(); ?>index.php/usuario/logout">
-                  <button type="button" class="btn btn-warning">Cerrar sesion</button>
-                </a>
-<br>
-<h3>
-  login:<?php echo $this->session->userdata('login');?><br>
-  id:<?php echo $this->session->userdata('idUsuario');?><br>
-  rol:<?php echo $this->session->userdata('rol');?><br>
-</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <!-- /todo depues del body -->
-                
+                <?php
+                    echo form_open_multipart('fraterno/agregarproductodb') 
+                ?> //falta modificar los datos del formulario
+                    <input type="text" name="nombre" id="" placeholder="Escriba el nombre" class="form-control">
+                    <input type="text" name="primerApellido" id="" placeholder="Escriba primer apellido" class="form-control">
+                    <input type="text" name="apellido2" id="" placeholder="Escriba segundo apellido" class="form-control">
+                    <input type="text" name="nota" id="" placeholder="Escriba si el fraterno 'debe' o 'no debe'" class="form-control">
+                    <br>
+                    <button type="submit" class="btn btn-primary">AGREGAR</button>
+                <?php
+                echo form_close()
+                ?>
+                <?php    
+                // </form>
+                ?>
               </div>
               <!-- /.card-body -->
             </div>
@@ -60,4 +61,3 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-

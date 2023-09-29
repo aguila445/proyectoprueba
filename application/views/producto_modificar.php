@@ -5,7 +5,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Lista de fraterno</h1>
+            <h1>LISTA DE PRODUCTOS</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -24,7 +24,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title"> FORMULARIO AGREGAR DE FRATERNO </h3>
+                <h3 class="card-title">FORMULARIO DE MODIFICACION PRODUCTO</h3>
                 <br>
                 <a href="<?php echo base_url(); ?>index.php/fraterno/indexlte">
                     <button type="button" class="btn btn-warning">IR HOME</button>
@@ -32,20 +32,24 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
+              <!-- /todo depues del body -->
                 <?php
-                    echo form_open_multipart('fraterno/agregardb')
+                foreach($infProducto->result()as $row)
+                {
+                    echo form_open_multipart('fraterno/modificarproductodb')
                 ?>
-                    <input type="text" name="nombre" id="" placeholder="Escriba el nombre" class="form-control">
-                    <input type="text" name="primerApellido" id="" placeholder="Escriba primer apellido" class="form-control">
-                    <input type="text" name="apellido2" id="" placeholder="Escriba segundo apellido" class="form-control">
-                    <input type="text" name="nota" id="" placeholder="Escriba si el fraterno 'debe' o 'no debe'" class="form-control">
-                    <br>
-                    <button type="submit" class="btn btn-primary">AGREGAR</button>
+                    <div>
+                    <button type="submit" class="btn btn-primary">modificar</button>
+                    </div>
+                    <input type="hidden" name="idFraterno" id=""class="form-control" value="<?php echo $row->idFraterno;?>">
+                    <input type="text" name="nombre" id="" placeholder="Escriba el nombre" class="form-control" value="<?php echo $row->nombre;?>">
+                    <input type="text" name="primerApellido" id="" placeholder="Escriba el primer apellido" class="form-control" value="<?php echo $row->primerApellido;?>">
+                    <input type="text" name="segundoApellido" id="" placeholder="Escriba el segundo apellido" class="form-control" value="<?php echo $row->segundoApellido;?>">
+                    <input type="text" name="nota" id="" placeholder="Escriba si el fraterno debe o no" class="form-control" value="<?php echo $row->nota;?>">
+
                 <?php
-                echo form_close()
-                ?>
-                <?php    
-                // </form>
+                  echo form_close();
+                }
                 ?>
               </div>
               <!-- /.card-body -->

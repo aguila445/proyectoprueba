@@ -39,6 +39,10 @@ class Usuario extends CI_Controller
             if ($rol=='administrador') {
                 redirect('fraterno/indexlte', 'refresh');
             }
+            else
+            if($rol=='encargado'){
+                redirect('fraterno/encargadolte', 'refresh');
+            }
             else {
                 redirect('fraterno/invitadolte', 'refresh');
             }

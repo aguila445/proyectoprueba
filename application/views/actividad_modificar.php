@@ -5,7 +5,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Lista de paises</h1>
+            <h1>LISTA DE FRATERNOS</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -24,28 +24,33 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title"> Lista de fraterno deshabilitados</h3>
-                <br>
-                <h3 class="card-title"> VISTA DE FRATERNO </h3>
+                <h3 class="card-title"> MODIFICAR ACTIVIDAD</h3>
                 <br>
                 <a href="<?php echo base_url(); ?>index.php/fraterno/indexlte">
                     <button type="button" class="btn btn-warning">IR HOME</button>
                 </a>
-                <br>
-                <a href="<?php echo base_url(); ?>index.php/usuario/logout">
-                  <button type="button" class="btn btn-warning">Cerrar sesion</button>
-                </a>
-<br>
-<h3>
-  login:<?php echo $this->session->userdata('login');?><br>
-  id:<?php echo $this->session->userdata('idUsuario');?><br>
-  rol:<?php echo $this->session->userdata('rol');?><br>
-</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <!-- /todo depues del body -->
-                
+              <!-- /todo depues del body -->
+                <?php
+                foreach($infProducto->result()as $row)
+                {
+                    echo form_open_multipart('fraterno/modificaractividaddb')
+                ?>
+                    <div>
+                    <button type="submit" class="btn btn-primary">modificar</button>
+                    </div>
+                    <input type="hidden" name="idFraterno" id=""class="form-control" value="<?php echo $row->idFraterno;?>">
+                    <input type="text" name="nombre" id="" placeholder="Escriba el nombre" class="form-control" value="<?php echo $row->nombre;?>">
+                    <input type="text" name="primerApellido" id="" placeholder="Escriba el primer apellido" class="form-control" value="<?php echo $row->primerApellido;?>">
+                    <input type="text" name="segundoApellido" id="" placeholder="Escriba el segundo apellido" class="form-control" value="<?php echo $row->segundoApellido;?>">
+                    <input type="text" name="nota" id="" placeholder="Escriba si el fraterno debe o no" class="form-control" value="<?php echo $row->nota;?>">
+
+                <?php
+                  echo form_close();
+                }
+                ?>
               </div>
               <!-- /.card-body -->
             </div>
@@ -60,4 +65,3 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-

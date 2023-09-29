@@ -24,10 +24,10 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title"> Lista de fraterno deshabilitados </h3>
+                <h3 class="card-title"> LISTA DE FRATERNOS DESHABILITADOS </h3>
                 <br>
                 <a href="<?php echo base_url(); ?>index.php/fraterno/indexlte">
-                    <button type="button" class="btn btn-warning">Ver lista habilitados</button>
+                    <button type="button" class="btn btn-warning">IR HOME</button>
                 </a>
               </div>
               <!-- /.card-header -->

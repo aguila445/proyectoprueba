@@ -24,7 +24,11 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title"> Modificar fraterno</h3>
+                <h3 class="card-title"> FORMULARIO DE MODIFICACION FRATERNO</h3>
+                <br>
+                <a href="<?php echo base_url(); ?>index.php/fraterno/indexlte">
+                    <button type="button" class="btn btn-warning">IR HOME</button>
+                </a>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
