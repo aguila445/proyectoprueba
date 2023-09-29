@@ -5,7 +5,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Lista de paises</h1>
+            <h1>Lista de fraternos deshabilitados</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -31,7 +31,7 @@
                 </a>
               </div>
               <!-- /.card-header -->
-              <div class="card-body">
+              <div class="card-body" class="content a" >
                 <!-- /todo depues del body -->
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
@@ -40,7 +40,7 @@
                         <th>nombre</th>
                         <th>primer apellido</th>
                         <th>segundo apellido </th>
-                        <th>numero de movil </th>
+                        <th>nota </th>
                         <th>Habilitar</th>
                     </tr>
                   </thead>
@@ -53,8 +53,8 @@
                     <tr>
                         <td><?php echo $indice;?></td>
                         <td><?php echo $row->nombre;?></td>
-                        <td><?php echo $row->apellido1;?></td>
-                        <td><?php echo $row->apellido2;?></td>
+                        <td><?php echo $row->primerApellido;?></td>
+                        <td><?php echo $row->segundoApellido;?></td>
                         <td><?php echo $row->nota;?></td>
                         <td>
                             <?php

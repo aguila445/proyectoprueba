@@ -34,12 +34,15 @@
                 {
                     echo form_open_multipart('fraterno/modificardb')
                 ?>
+                    <div>
+                    <button type="submit" class="btn btn-primary">modificar</button>
+                    </div>
                     <input type="hidden" name="idFraterno" id=""class="form-control" value="<?php echo $row->idFraterno;?>">
                     <input type="text" name="nombre" id="" placeholder="Escriba el nombre" class="form-control" value="<?php echo $row->nombre;?>">
-                    <input type="text" name="apellido1" id="" placeholder="Escriba el primer apellido" class="form-control" value="<?php echo $row->apellido1;?>">
-                    <input type="text" name="apellido2" id="" placeholder="Escriba el segundo apellido" class="form-control" value="<?php echo $row->apellido2;?>">
-                    <input type="text" name="nota" id="" placeholder="Escriba el numero de movil" class="form-control" value="<?php echo $row->nota;?>">
-                    <button type="submit" class="btn btn-primary">modificar</button>
+                    <input type="text" name="primerApellido" id="" placeholder="Escriba el primer apellido" class="form-control" value="<?php echo $row->primerApellido;?>">
+                    <input type="text" name="segundoApellido" id="" placeholder="Escriba el segundo apellido" class="form-control" value="<?php echo $row->segundoApellido;?>">
+                    <input type="text" name="nota" id="" placeholder="Escriba si el fraterno debe o no" class="form-control" value="<?php echo $row->nota;?>">
+
                 <?php
                   echo form_close();
                 }

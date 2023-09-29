@@ -4,7 +4,7 @@
     <head>
         
         <!-- Title -->
-        <title>Modern | Admin Dashboard Template</title>
+        <title>MI WEB | Admin Dashboard Template</title>
         
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
         <meta charset="UTF-8">

@@ -22,6 +22,21 @@ class Fraterno extends CI_Controller
         }
         
     }
+
+    public function deshabilitados()
+	{
+        $lista=$this->fraterno_model->listafraternodeshabilitado();
+        $data['fraterno']=$lista;
+
+        $this ->load->view('inclte/cabecera');
+        $this ->load->view('inclte/menulateral');
+        $this ->load->view('inclte/menusuperior');
+		$this->load->view('est_listadeshabilitado',$data);
+        $this ->load->view('inclte/pie');
+		
+	}
+    
+
     public function subirfoto()
     {
         if ($this->session->userdata('login')) {
@@ -79,8 +94,8 @@ class Fraterno extends CI_Controller
         //$data es un array relacional
         // atrib. DB       Y   FORMULARIO
         $data['nombre']=$_POST['nombre'];
-        $data['primerApellido']=$_POST['apellido1'];// el primero es de la db y el segundo del formulario
-        $data['segundoApellido']=$_POST['apellido2'];
+        $data['primerApellido']=$_POST['primerApellido'];// el primero es de la db y el segundo del formulario
+        $data['segundoApellido']=$_POST['segundoApellido'];
         $data['nota']=$_POST['nota'];
 
         $this->fraterno_model->agregarfraterno($data);//invocamos el metodo
@@ -113,7 +128,7 @@ class Fraterno extends CI_Controller
         // el primero como en base
         $data['nombre']=$_POST['nombre'];
         $data['primerApellido']=$_POST['apellido1'];
-        $data['segundoApellido']=$_POST['apellido2'];
+        $data['segundoApellido']=$_POST['segundoApellido'];
         $data['nota']=$_POST['nota'];
         $this->fraterno_model->modificarfraterno($idFraterno,$data);
 
@@ -129,18 +144,8 @@ class Fraterno extends CI_Controller
         redirect('fraterno/indexlte','refresh');
 
     }
-    public function deshabilitados()
-	{
-        $lista=$this->fraterno_model->listafraternodeshabilitado();
-        $data['fraterno']=$lista;
+    
 
-        $this ->load->view('inclte/cabecera');
-        $this ->load->view('inclte/menusuperior');
-        $this ->load->view('inclte/menulateral');
-		$this->load->view('est_listadeshabilitado',$data);
-        $this ->load->view('inclte/pie');
-		
-	}
     public function habilitarbd()
     {
         $idFraterno=$_POST['idFraterno'];

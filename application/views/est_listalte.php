@@ -1,11 +1,11 @@
 <!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
+<div class="content-wrapper"  >
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Lista de fraterno</h1>
+            <h1>Lista de fraternos</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -18,7 +18,7 @@
     </section>
 
     <!-- Main content -->
-    <section class="content">
+    <section class="content" >
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
@@ -30,21 +30,41 @@
             <!--  id:<?php echo $this->session->userdata('idUsuario');?><br>-->
               rol:<?php echo $this->session->userdata('rol');?><br>
             </h4>
+            <DIV>
                 <br>
                 <a href="<?php echo base_url();?>index.php/fraterno/agregar">
                     <button type="button" class="btn btn-primary">CREAR FRATERNO</button>
                 </a>
+                <a href="<?php echo base_url();?>index.php/fraterno/agregar">
+                    <button type="button" class="btn btn-primary">CREAR ACTIVIDAD</button>
+                </a>
+                <a href="<?php echo base_url();?>index.php/fraterno/agregar">
+                    <button type="button" class="btn btn-primary">CREAR PRODUCTO</button>
+                </a>
+            </DIV>   
+            <DIV> 
+                <br>
                 <a href="<?php echo base_url(); ?>index.php/fraterno/deshabilitados">
                   <button type="button" class="btn btn-primary">LISTA DESHABILITADOS</button>
                 </a>
+                <a href="<?php echo base_url(); ?>index.php/fraterno/deshabilitados">
+                  <button type="button" class="btn btn-primary">REALIZAR VENTA</button>
+                </a>
+                <a href="<?php echo base_url(); ?>index.php/fraterno/deshabilitados">
+                  <button type="button" class="btn btn-primary">VER ACTIVIDAD</button>
+                </a>
+            </DIV>
+</DIV>
+                <br>
                 <a href="<?php echo base_url(); ?>index.php/usuario/logout">
                   <button type="button" class="btn btn-warning">CERRAR SESION</button>
                 </a>
                 </div>
                 <div>
                 <a href="<?php echo base_url();?>index.php/estdudiantelistaxls2" target="blank">
-                <button type="submit" class="btn btn-success">EXCEL</button>        
+                <button type="submit" class="btn btn-success">REPORTE EXCEL</button>        
                 </a>
+                </div>
                 </div>
             <br>
 
@@ -53,7 +73,7 @@
 
             <h3 class="card-title"> LISTA DE FRATERNOS </h3>
               <!-- /.card-header -->
-              <div class="card-body">
+              <div class="card-body" class="content a" >
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                     <tr>

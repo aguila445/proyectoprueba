@@ -32,7 +32,7 @@
                     echo form_open_multipart('fraterno/agregardb')
                 ?>
                     <input type="text" name="nombre" id="" placeholder="Escriba el nombre" class="form-control">
-                    <input type="text" name="apellido1" id="" placeholder="Escriba primer apellido" class="form-control">
+                    <input type="text" name="primerApellido" id="" placeholder="Escriba primer apellido" class="form-control">
                     <input type="text" name="apellido2" id="" placeholder="Escriba segundo apellido" class="form-control">
                     <input type="text" name="nota" id="" placeholder="Escriba el numero de movil" class="form-control">
                     <br>

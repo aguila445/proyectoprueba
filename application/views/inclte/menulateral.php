@@ -13,9 +13,9 @@
                         </div>
                     </div>
                     <ul class="menu accordion-menu">
-                        <li class="active"><a href="index.html" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-home"></span><p>Dashboard</p></a></li>
-                        <li><a href="profile.html" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-user"></span><p>Profile</p></a></li>
-                        <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-envelope"></span><p>Mailbox</p><span class="arrow"></span></a>
+                        <li class="active"><a href="index.html" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-home"></span><p>PRINCIPAL</p></a></li>
+                        <li><a href="profile.html" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-user"></span><p>FRATERNOS</p></a></li>
+                        <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-envelope"></span><p>ANUNCIOS</p><span class="arrow"></span></a>
                             <ul class="sub-menu">
                                 <li><a href="inbox.html">Inbox</a></li>
                                 <li><a href="inbox-alt.html">Inbox Alt</a></li>
@@ -25,6 +25,7 @@
                                 <li><a href="compose-alt.html">Compose Alt</a></li>
                             </ul>
                         </li>
+                        <!--
                         <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-briefcase"></span><p>UI Kits</p><span class="arrow"></span></a>
                             <ul class="sub-menu">
                                 <li><a href="ui-alerts.html">Alerts</a></li>
@@ -42,7 +43,8 @@
                                 <li><a href="ui-tree-view.html">Tree View</a></li>
                             </ul>
                         </li>
-                        <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-th"></span><p>Layouts</p><span class="arrow"></span></a>
+                        -->
+                        <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-th"></span><p>REPORTES</p><span class="arrow"></span></a>
                             <ul class="sub-menu">
                                 <li><a href="layout-blank.html">Blank Page</a></li>
                                 <li><a href="layout-boxed.html">Boxed Page</a></li>
@@ -56,14 +58,14 @@
                                 <li><a href="layout-hover-menu.html">Hover Menu</a></li>
                             </ul>
                         </li>
-                        <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-list"></span><p>Tables</p><span class="arrow"></span></a>
+                        <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-list"></span><p>LISTAS</p><span class="arrow"></span></a>
                             <ul class="sub-menu">
                                 <li><a href="table-static.html">Static Tables</a></li>
                                 <li><a href="table-responsive.html">Responsive Tables</a></li>
                                 <li><a href="table-data.html">Data Tables</a></li>
                             </ul>
                         </li>
-                        <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-edit"></span><p>Forms</p><span class="arrow"></span></a>
+                        <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-edit"></span><p>INSCRIPCIONES</p><span class="arrow"></span></a>
                             <ul class="sub-menu">
                                 <li><a href="form-elements.html">Form Elements</a></li>
                                 <li><a href="form-wizard.html">Form Wizard</a></li>
@@ -74,7 +76,7 @@
                                 <li><a href="form-x-editable.html">X-editable</a></li>
                             </ul>
                         </li>
-                        <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-stats"></span><p>Charts</p><span class="arrow"></span></a>
+                        <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-stats"></span><p>ESTADISTICAS</p><span class="arrow"></span></a>
                             <ul class="sub-menu">
                                 <li><a href="charts-sparkline.html">Sparkline</a></li>
                                 <li><a href="charts-rickshaw.html">Rickshaw</a></li>
@@ -83,7 +85,7 @@
                                 <li><a href="charts-chartjs.html">Chart.js</a></li>
                             </ul>
                         </li>
-                        <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-log-in"></span><p>Login</p><span class="arrow"></span></a>
+                        <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-log-in">LOGIN</span><p></p><span class="arrow"></span></a>
                             <ul class="sub-menu">
                                 <li><a href="login.html">Login Form</a></li>
                                 <li><a href="login-alt.html">Login Alt</a></li>
@@ -93,12 +95,13 @@
                                 <li><a href="lock-screen.html">Lock Screen</a></li>
                             </ul>
                         </li>
-                        <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-map-marker"></span><p>Maps</p><span class="arrow"></span></a>
+                     <!--   <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-map-marker"></span><p>Maps</p><span class="arrow"></span></a>
                             <ul class="sub-menu">
                                 <li><a href="maps-google.html">Google Maps</a></li>
                                 <li><a href="maps-vector.html">Vector Maps</a></li>
                             </ul>
                         </li>
+                    -
                         <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-gift"></span><p>Extra</p><span class="arrow"></span></a>
                             <ul class="sub-menu">
                                 <li><a href="404.html">404 Page</a></li>
@@ -116,6 +119,7 @@
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
                         </li>
+            
                         <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-flash"></span><p>Levels</p><span class="arrow"></span></a>
                             <ul class="sub-menu">
                                 <li class="droplink"><a href="#"><p>Level 1.1</p><span class="arrow"></span></a>
@@ -131,6 +135,7 @@
                                 <li><a href="#">Level 1.2</a></li>
                             </ul>
                         </li>
+-->
                     </ul>
                 </div><!-- Page Sidebar Inner -->
             </div><!-- Page Sidebar -->
