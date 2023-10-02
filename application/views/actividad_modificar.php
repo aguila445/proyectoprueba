@@ -34,20 +34,18 @@
               <div class="card-body">
               <!-- /todo depues del body -->
                 <?php
-                foreach($infProducto->result()as $row)
+                foreach($infActividad->result()as $row)
                 {
                     echo form_open_multipart('fraterno/modificaractividaddb')
                 ?>
                     <div>
                     <button type="submit" class="btn btn-primary">modificar</button>
                     </div>
-                    <input type="hidden" name="idFraterno" id=""class="form-control" value="<?php echo $row->idFraterno;?>">
-                    <input type="text" name="nombre" id="" placeholder="Escriba el nombre" class="form-control" value="<?php echo $row->nombre;?>">
-                    <input type="text" name="primerApellido" id="" placeholder="Escriba el primer apellido" class="form-control" value="<?php echo $row->primerApellido;?>">
-                    <input type="text" name="segundoApellido" id="" placeholder="Escriba el segundo apellido" class="form-control" value="<?php echo $row->segundoApellido;?>">
-                    <input type="text" name="nota" id="" placeholder="Escriba si el fraterno debe o no" class="form-control" value="<?php echo $row->nota;?>">
-
-                <?php
+                    <input type="hidden" name="idActividad" id=""class="form-control" value="<?php echo $row->idActividad;?>">
+                    <input type="text" name="nombre" id="" placeholder="Escriba la actividad" class="form-control" value="<?php echo $row->nombre;?>">
+                    <input type="date" name="fecha" id="" placeholder="Escriba fecha" class="form-control" value="<?php echo $row->fecha;?>">
+                    <input type="text" name="lugar" id="" placeholder="Escriba el lugar" class="form-control" value="<?php echo $row->lugar;?>">
+              <?php
                   echo form_close();
                 }
                 ?>

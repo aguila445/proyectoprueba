@@ -93,11 +93,11 @@
                   <thead>
                     <tr>
                       <th>n°</th> 
-                      <th>nombre</th>
-                      <th>primer ap.</th>
-                      <th>segundo ap. </th>
-                      <th>nota</th>
-                      <th>foto</th>
+                      <th>producto</th>
+                      <th>ropa</th>
+                      <th>precio </th>
+                      <th>talla</th>
+                      <th>cantidad</th>
                       <th>Modificar</th>
                       <th>Deshabilitar</th>
                       <th>Eliminar</th>
@@ -107,52 +107,25 @@
                     <tbody>
                     <?php
                     $indice=1;//CONTADOR CORRELATIVO
-                        foreach($fraterno->result()as $row)
+                        foreach($producto->result()as $row)
                         { 
                             //Debe coincidir los nombres de la tabla en la BD
                             //El id nunca debe mostrarse  
                     ?>
                         <tr>
                           <td><?php echo $indice;?></td>
-                          <td><?php echo $row->nombre;?></td>
-                          <td><?php echo $row->primerApellido;?></td>
-                          <td><?php echo $row->segundoApellido;?></td>
-                          <td><?php echo $row->nota;?></td>
+                          <td><?php echo $row->nombreProducto;?></td>
+                          <td><?php echo $row->ropa;?></td>
+                          <td><?php echo $row->precio;?></td>
+                          <td><?php echo $row->talla;?></td>
+                          <td><?php echo $row->cantidad;?></td>
                          
-                         
-                          <!--Se ocupa subir fotos-->
-                          <td>
-                                    <?php
-                                    $foto = $row->foto;
-                                    if ($foto == "") {
-                                    ?>
-                                        <img width="50" src="<?php echo base_url(); ?>uploads/fraternos/mod.png">
-                                    <?php
-                                    } else {
-                                    ?>
-                                        <img width="50" src="<?php echo base_url(); ?>uploads/fraternos/<?php echo $foto; ?>">
-                                    <?php
-                                    }
-                                    ?>
-                                    <?php
-                                    echo form_open_multipart('fraterno/subirfoto');
-                                    ?>
-                                    <input type="hidden" name="idFraterno" value="<?php echo $row->idFraterno; ?>">
-                                    <button type="submit" class="btn btn-warning">
-                                        Subir
-                                    </button>
-                                    <?php
-                                    echo form_close();
-                                    ?>
-                                </td>
-                                <!--final para fotos-->
-
-                         <!-- <td> <!?php echo formatearFecha($row->creado);?></td> -->
+                        <!-- <td> <!?php echo formatearFecha($row->creado);?></td> -->
                             <td>
                                 <?php
                                     echo form_open_multipart('fraterno/modificarproducto')
                                 ?>
-                                    <input type="hidden" name="idFraterno" value="<?php echo $row->idFraterno;?>">
+                                    <input type="hidden" name="idProducto" value="<?php echo $row->idProducto;?>">
                                     <!--Se ocupa el rol hidden para ocultar los id en la página-->
 
                                     <button type="submit" class="btn btn-primary">modificar</button>
@@ -164,7 +137,7 @@
                                 <?php
                                     echo form_open_multipart('fraterno/deshabilitarproductodb');
                                 ?>
-                                  <input type="hidden" name="idFraterno" value="<?php echo $row->idFraterno; ?>">
+                                  <input type="hidden" name="idProducto" value="<?php echo $row->idProducto; ?>">
                                   <button type="submit" class="btn btn-warning">deshabilitar</button>        
                                 <?php
                                     echo form_close();
@@ -175,7 +148,7 @@
                                 <?php
                                     echo form_open_multipart('fraterno/eliminarproductodb')
                                 ?>
-                                    <input type="hidden" name="idFraterno" value="<?php echo $row->idFraterno;?>">
+                                    <input type="hidden" name="idProducto" value="<?php echo $row->idProducto;?>">
                                     <!--Se ocupa el rol hidden para ocultar los id en la página-->
                                     <button type="submit" class="btn btn-danger">eliminar</button>
                                 <?php

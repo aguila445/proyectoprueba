@@ -34,7 +34,7 @@
               <div class="card-body">
               <!-- /todo depues del body -->
                 <?php
-                foreach($infProducto->result()as $row)
+                foreach($infFraterno->result()as $row)
                 {
                     echo form_open_multipart('fraterno/modificardb')
                 ?>

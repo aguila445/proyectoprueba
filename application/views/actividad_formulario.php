@@ -34,11 +34,10 @@
               <div class="card-body">
                 <?php
                     echo form_open_multipart('fraterno/agregaractividaddb') 
-                ?> //falta modificar los datos del formulario
-                    <input type="text" name="nombre" id="" placeholder="Escriba el nombre" class="form-control">
-                    <input type="text" name="primerApellido" id="" placeholder="Escriba primer apellido" class="form-control">
-                    <input type="text" name="apellido2" id="" placeholder="Escriba segundo apellido" class="form-control">
-                    <input type="text" name="nota" id="" placeholder="Escriba si el fraterno 'debe' o 'no debe'" class="form-control">
+                ?> 
+                    <input type="text" name="nombre" id="" placeholder="Escriba la actividad" class="form-control">
+                    <input type="date" name="fecha" id="" placeholder="Escriba la fecha" class="form-control">
+                    <input type="text" name="lugar" id="" placeholder="Escriba el lugar del evento" class="form-control">
                     <br>
                     <button type="submit" class="btn btn-primary">AGREGAR</button>
                 <?php

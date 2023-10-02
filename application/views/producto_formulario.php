@@ -34,11 +34,13 @@
               <div class="card-body">
                 <?php
                     echo form_open_multipart('fraterno/agregarproductodb') 
-                ?> //falta modificar los datos del formulario
-                    <input type="text" name="nombre" id="" placeholder="Escriba el nombre" class="form-control">
-                    <input type="text" name="primerApellido" id="" placeholder="Escriba primer apellido" class="form-control">
-                    <input type="text" name="apellido2" id="" placeholder="Escriba segundo apellido" class="form-control">
-                    <input type="text" name="nota" id="" placeholder="Escriba si el fraterno 'debe' o 'no debe'" class="form-control">
+                ?> /
+                    <input type="text" name="nombreProducto" id="" placeholder="Escriba el nombre del producto" class="form-control">
+                    <input type="text" name="ropa" id="" placeholder="Tipo de ropa(si corresponde)" class="form-control">
+                    <input type="text" name="precio" id="" placeholder="Escriba precio del producto" class="form-control">
+                    <input type="text" name="talla" id="" placeholder="Escoja la talla" class="form-control">
+                    <input type="text" name="cantidad" id="" placeholder="Ingrese la cantidad del producto" class="form-control">
+                    
                     <br>
                     <button type="submit" class="btn btn-primary">AGREGAR</button>
                 <?php

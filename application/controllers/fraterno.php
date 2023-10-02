@@ -50,7 +50,7 @@ class Fraterno extends CI_Controller
         }
     }
 
-        public function fraternos()
+        public function indexadm()
     {
         if($this->session->userdata('login'))
         {
@@ -87,7 +87,7 @@ class Fraterno extends CI_Controller
         public function actividades()
         {
             $lista=$this->fraterno_model->listaactividades();
-            $data['fraterno']=$lista;
+            $data['actividad']=$lista;
     
             $this ->load->view('inclte/cabecera');
             $this ->load->view('inclte/menulateral');
@@ -101,7 +101,7 @@ class Fraterno extends CI_Controller
         public function productos()
         {
             $lista=$this->fraterno_model->listaproductos();
-            $data['fraterno']=$lista;
+            $data['producto']=$lista;
     
             $this ->load->view('inclte/cabecera');
             $this ->load->view('inclte/menulateral');
@@ -146,16 +146,16 @@ class Fraterno extends CI_Controller
         $data['nota']=$_POST['nota'];
 
         $this->fraterno_model->agregarfraterno($data);//invocamos el metodo
-        redirect('fraterno/indexlte','refresh');
+        redirect('fraterno/indexadm','refresh');
     }
     public function modificar()
     {
         $idFraterno=$_POST['idFraterno'];
-        $data['infProducto']=$this->fraterno_model->recuperarfraterno($idFraterno);
+        $data['infFraterno']=$this->fraterno_model->recuperarfraterno($idFraterno);
 
         $this ->load->view('inclte/cabecera');
-        $this ->load->view('inclte/menusuperior');
         $this ->load->view('inclte/menulateral');
+        $this ->load->view('inclte/menusuperior');
         $this ->load->view('est_modificar',$data);
         $this ->load->view('inclte/pie');
     }
@@ -164,20 +164,19 @@ class Fraterno extends CI_Controller
         $idFraterno=$_POST['idFraterno'];
         // el primero como en base
         $data['nombre']=$_POST['nombre'];
-        $data['primerApellido']=$_POST['apellido1'];
+        $data['primerApellido']=$_POST['primerApellido'];
         $data['segundoApellido']=$_POST['segundoApellido'];
         $data['nota']=$_POST['nota'];
 
         $this->fraterno_model->modificarfraterno($idFraterno,$data);
-        redirect('fraterno/indexlte','refresh');
+        redirect('fraterno/indexadm','refresh');
     }
     public function deshabilitardb()
     {
         $idFraterno=$_POST['idFraterno'];
         $data['estado']='0';
-
         $this->fraterno_model->modificarfraterno($idFraterno,$data);
-        redirect('fraterno/indexlte','refresh');
+        redirect('fraterno/indexadm','refresh');
 
     }
     public function habilitardb()
@@ -191,7 +190,7 @@ class Fraterno extends CI_Controller
     {
         $idFraterno=$_POST['idFraterno'];// tal como está en el formulario
         $this->fraterno_model->eliminarfraterno($idFraterno);
-        redirect('fraterno/indexlte','refresh');
+        redirect('fraterno/indexadm','refresh');
     }
 
     //para crud producto
@@ -204,22 +203,33 @@ class Fraterno extends CI_Controller
         $this ->load->view('producto_formulario');
         $this ->load->view('inclte/pie');
     }
-    public function agregarproductodb()// se construye $data
+    public function agregarproductodb()
     {
-        //$data es un array relacional
-        // atrib. DB       Y   FORMULARIO
-        $data['nombre']=$_POST['nombre'];
-        $data['primerApellido']=$_POST['primerApellido'];// el primero es de la db y el segundo del formulario
-        $data['segundoApellido']=$_POST['segundoApellido'];
-        $data['nota']=$_POST['nota'];
-
-        $this->fraterno_model->agregarproducto($data);//invocamos el metodo
-        redirect('fraterno/indexlte','refresh');
+        $data['nombreProducto'] = $_POST['nombreProducto'];
+        $data['ropa'] = $_POST['ropa'];
+        $data['precio'] = $_POST['precio'];
+        $data['talla'] = $_POST['talla'];
+        $data['cantidad'] = $_POST['cantidad'];
+    
+        // Verificar si ya existe un producto con la misma ropa y talla
+        $existingProduct = $this->fraterno_model->getProductByRopaAndTalla($data['ropa'], $data['talla']);
+    
+        if ($existingProduct) {
+            // Si existe, actualiza la cantidad sumando la cantidad actual
+            $data['cantidad'] += $existingProduct->cantidad;
+            $this->fraterno_model->actualizarProducto($existingProduct->idProducto, $data);
+        } else {
+            // Si no existe, inserta un nuevo producto
+            $this->fraterno_model->agregarproducto($data);
+        }
+    
+        redirect('fraterno/indexlte', 'refresh');
     }
+    
     public function modificarproducto()
     {
-        $idFraterno=$_POST['idFraterno'];
-        $data['infProducto']=$this->fraterno_model->recuperarproducto($idFraterno);
+        $idProducto=$_POST['idProducto'];
+        $data['infProducto']=$this->fraterno_model->recuperarproducto($idProducto);
 
         $this ->load->view('inclte/cabecera');
         $this ->load->view('inclte/menusuperior');
@@ -229,40 +239,41 @@ class Fraterno extends CI_Controller
     }
     public function modificarproductodb()
     {
-        $idFraterno=$_POST['idFraterno'];
+        $idProducto=$_POST['idProducto'];
         // el primero como en base
-        $data['nombre']=$_POST['nombre'];
-        $data['primerApellido']=$_POST['apellido1'];
-        $data['segundoApellido']=$_POST['segundoApellido'];
-        $data['nota']=$_POST['nota'];
-        $this->fraterno_model->modificarproducto($idFraterno,$data);
+        $data['nombreProducto']=$_POST['nombreProducto'];
+        $data['ropa']=$_POST['ropa'];
+        $data['precio']=$_POST['precio'];
+        $data['talla']=$_POST['talla'];
+        $data['cantidad']=$_POST['cantidad'];
+        $this->fraterno_model->modificarproducto($idProducto,$data);
 
         redirect('fraterno/indexlte','refresh');
     }
     public function deshabilitarproductobd()
     {
-        $idFraterno=$_POST['idFraterno'];
+        $idProducto=$_POST['idProducto'];
         $data['estado']='0';
 
-        $this->fraterno_model->modificarproductodb($idFraterno,$data);
+        $this->fraterno_model->modificarproductodb($idProducto,$data);
 
         redirect('fraterno/indexlte','refresh');
 
     } 
     public function habilitarproductobd()
     {
-        $idFraterno=$_POST['idFraterno'];
+        $idProducto=$_POST['idProducto'];
         $data['estado']='1';
 
-        $this->fraterno_model->modificarproducto($idFraterno,$data);
+        $this->fraterno_model->modificarproducto($idProducto,$data);
         redirect('fraterno/deshabilitados','refresh');
 
     }
     
     public function eliminarproductodb()
     {
-        $idFraterno=$_POST['idFraterno'];// tal como está en el formulario
-        $this->fraterno_model->eliminarproducto($idFraterno);
+        $idProducto=$_POST['idProducto'];// tal como está en el formulario
+        $this->fraterno_model->eliminarproducto($idProducto);
         redirect('fraterno/indexlte','refresh');
     }
 
@@ -281,60 +292,60 @@ class Fraterno extends CI_Controller
         //$data es un array relacional
         // atrib. DB       Y   FORMULARIO
         $data['nombre']=$_POST['nombre'];
-        $data['primerApellido']=$_POST['primerApellido'];// el primero es de la db y el segundo del formulario
-        $data['segundoApellido']=$_POST['segundoApellido'];
-        $data['nota']=$_POST['nota'];
+        $data['fecha']=$_POST['fecha'];// el primero es de la db y el segundo del formulario
+        $data['lugar']=$_POST['lugar'];
+        //$data['nota']=$_POST['nota'];
 
         $this->fraterno_model->agregaractividad($data);//invocamos el metodo
-        redirect('fraterno/indexlte','refresh');
+        redirect('fraterno/actividades','refresh');
     }
 
     public function modificaractividad()
     {
-        $idFraterno=$_POST['idFraterno'];
-        $data['infProducto']=$this->fraterno_model->recuperaractividad($idFraterno);
+        $idActividad=$_POST['idActividad'];
+        $data['infActividad']=$this->fraterno_model->recuperaractividad($idActividad);
 
         $this ->load->view('inclte/cabecera');
-        $this ->load->view('inclte/menusuperior');
         $this ->load->view('inclte/menulateral');
-        $this ->load->view('est_modificar',$data);
+        $this ->load->view('inclte/menusuperior');
+        $this ->load->view('actividad_modificar',$data);
         $this ->load->view('inclte/pie');
     }
 
     public function modificaractividaddb()
     {
-        $idFraterno=$_POST['idFraterno'];
+        $idActividad=$_POST['idActividad'];
         // el primero como en base
         $data['nombre']=$_POST['nombre'];
-        $data['primerApellido']=$_POST['apellido1'];
-        $data['segundoApellido']=$_POST['segundoApellido'];
-        $data['nota']=$_POST['nota'];
+        $data['fecha']=$_POST['fecha'];
+        $data['lugar']=$_POST['lugar'];
+        //$data['nota']=$_POST['nota'];
 
-        $this->fraterno_model->modificaractividad($idFraterno,$data);
-        redirect('fraterno/indexlte','refresh');
+        $this->fraterno_model->modificaractividad($idActividad,$data);
+        redirect('fraterno/modificaractividad','refresh');
     }
     public function deshabilitaractividadbd()
     {
-        $idFraterno=$_POST['idFraterno'];
+        $idActividad=$_POST['idActividad'];
         $data['estado']='0';
 
-        $this->fraterno_model->modificaractividaddb($idFraterno,$data);
-        redirect('fraterno/indexlte','refresh');
+        $this->fraterno_model->modificaractividaddb($idActividad,$data);
+        redirect('fraterno/listaactividades','refresh');
     }
     public function habilitaractividadbd()
     {
-        $idFraterno=$_POST['idFraterno'];
+        $idActividad=$_POST['idActividad'];
         $data['estado']='1';
 
-        $this->fraterno_model->modificaractividad($idFraterno,$data);
+        $this->fraterno_model->modificaractividad($idActividad,$data);
         redirect('fraterno/deshabilitados','refresh');
     }
 
     public function eliminaractividaddb()
     {
-        $idFraterno=$_POST['idFraterno'];// tal como está en el formulario
-        $this->fraterno_model->eliminaractividad($idFraterno);
-        redirect('fraterno/indexlte','refresh');
+        $idActividad=$_POST['idActividad'];// tal como está en el formulario
+        $this->fraterno_model->eliminaractividad($idActividad);
+        redirect('fraterno/actividades','refresh');
     }
    
 

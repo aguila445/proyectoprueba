@@ -110,7 +110,7 @@
                         { 
                             //Debe coincidir los nombres de la tabla en la BD
                             //El id nunca debe mostrarse  
-                    ?>
+                         ?>
                         <tr>
                           <td><?php echo $indice;?></td>
                           <td><?php echo $row->nombre;?></td>
