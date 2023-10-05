@@ -1,36 +1,16 @@
 <!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper"  >
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>Lista de fraternos</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">HOME</a></li>
-              <li class="breadcrumb-item active">TABLA PRINCIPAL</li>
-            </ol>
-          </div>
-        </div>
-      </div><!-- /.container-fluid -->
-    </section>
-
-    <!-- Main content -->
-    <section class="content" >
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
-            <div class="card">
-              <div class="card-header">
-                
-              <h4>
-              login:<?php echo $this->session->userdata('login');?><br>
-            <!--  id:<?php echo $this->session->userdata('idUsuario');?><br>-->
-              rol:<?php echo $this->session->userdata('rol');?><br>
-            </h4>
-            <DIV>
+<div class="page-inner">
+                <div class="page-title">
+                    <h3>FRATERNOS</h3>
+                    <div class="page-breadcrumb">
+                        <ol class="breadcrumb">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#">Tables</a></li>
+                            <li class="active">Responsive Tables</li>
+                        </ol>
+                    </div>
+                </div>
+                <DIV>
                 <br>
                 <a href="<?php echo base_url();?>index.php/fraterno/agregar">
                     <button type="button" class="btn btn-primary">CREAR FRATERNO</button>
@@ -44,6 +24,9 @@
             </DIV>   
             <DIV> 
                 <br>
+                <a href="<?php echo base_url(); ?>index.php/fraterno/indexadm">
+                  <button type="button" class="btn btn-primary">LISTA DE FRATERNOS</button>
+                </a>
                 <a href="<?php echo base_url(); ?>index.php/fraterno/deshabilitados">
                   <button type="button" class="btn btn-primary">LISTA DESHABILITADOS</button>
                 </a>
@@ -53,7 +36,6 @@
                 <a href="<?php echo base_url(); ?>index.php/fraterno/productos">
                   <button type="button" class="btn btn-primary">LISTA PRODUCTOS</button>
                 </a>
-
             </DIV>
             <div>
                 <BR>
@@ -64,47 +46,42 @@
                   <button type="button" class="btn btn-primary">VER ACTIVIDAD</button>
                 </a>
             </DIV>
-            <DIV>
-            <br>
-                <a href="<?php echo base_url(); ?>index.php/fraterno/indexlte">
-                    <button type="button" class="btn btn-warning">IR HOME</button>
-                </a>
+          <DIV>
+                <br>
                 <a href="<?php echo base_url(); ?>index.php/usuario/logout">
                   <button type="button" class="btn btn-warning">CERRAR SESION</button>
                 </a>
-                </div>
-                <div>
-                  <br>
                 <a href="<?php echo base_url();?>index.php/estdudiantelistaxls2" target="blank">
                 <button type="submit" class="btn btn-success">REPORTE EXCEL</button>        
                 </a>
                 </div>
-                </div>
+              
             <br>
-
-
-
-
-            <h3 class="card-title"> LISTA DE FRATERNOS </h3>
-              <!-- /.card-header -->
-              <div class="card-body" class="content a" >
-                <table id="example1" class="table table-bordered table-striped">
-                  <thead>
-                    <tr>
-                      <th>n°</th> 
-                      <th>nombre</th>
-                      <th>primer ap.</th>
-                      <th>segundo ap. </th>
-                      <th>nota</th>
-                      <th>foto</th>
-                      <th>Modificar</th>
-                      <th>Deshabilitar</th>
-                      <th>Eliminar</th>
-                    </tr>
-                    </thead>
-
-                    <tbody>
-                    <?php
+                <div id="main-wrapper">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel panel-white">
+                                <div class="panel-heading clearfix">
+                                    <h4 class="panel-title">LISTA DE FRATERNOS</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                            <tr>
+                                              <th>n°</th> 
+                                              <th>nombre</th>
+                                              <th>primer ap.</th>
+                                              <th>segundo ap. </th>
+                                              <th>nota</th>
+                                              <th>foto</th>
+                                              <th>Modificar</th>
+                                              <th>Deshabilitar</th>
+                                              <th>Eliminar</th>
+                                            </tr>
+                                          </thead>
+                                            <tbody>
+                                            <?php
                     $indice=1;//CONTADOR CORRELATIVO
                         foreach($fraterno->result()as $row)
                         { 
@@ -187,19 +164,10 @@
                     $indice++;
                     }
                     ?>
-                  </tbody>
-                </table>
-              </div>
-              <!-- /.card-body -->
-            </div>
-            <!-- /.card -->
-          </div>
-          <!-- /.col -->
-        </div>
-        <!-- /.row -->
-      </div>
-      <!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
+                                </tbody>
+                        </div>
+                     </div>
+                </div>
+                       
+        </div><!-- Row -->
+          

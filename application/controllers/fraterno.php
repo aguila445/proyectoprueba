@@ -96,6 +96,19 @@ class Fraterno extends CI_Controller
             $this ->load->view('inclte/pie');
             
         }
+         //vista de actividades deshabiliatadas
+    public function actividadesdeshabilitadas()
+	{
+        $lista=$this->fraterno_model->listaactividaddeshabilitada();
+        $data['actividad']=$lista;
+
+        $this ->load->view('inclte/cabecera');
+        $this ->load->view('inclte/menulateral');
+        $this ->load->view('inclte/menusuperior');
+		$this->load->view('act_listadeshabilitado',$data);
+        $this ->load->view('inclte/pie');
+		
+	}
 
         //vista de productos
         public function productos()
@@ -110,6 +123,19 @@ class Fraterno extends CI_Controller
             $this ->load->view('inclte/pie');
             
         }
+         //vista de productos deshabiliatos
+    public function productosdeshabilitados()
+	{
+        $lista=$this->fraterno_model->listaproductodeshabilitado();
+        $data['producto']=$lista;
+
+        $this ->load->view('inclte/cabecera');
+        $this ->load->view('inclte/menulateral');
+        $this ->load->view('inclte/menusuperior');
+		$this->load->view('prod_listadeshabilitado',$data);
+        $this ->load->view('inclte/pie');
+		
+	}
 
     //vista de ventas
     public function venta()
@@ -177,14 +203,13 @@ class Fraterno extends CI_Controller
         $data['estado']='0';
         $this->fraterno_model->modificarfraterno($idFraterno,$data);
         redirect('fraterno/indexadm','refresh');
-
     }
     public function habilitardb()
     {
         $idFraterno=$_POST['idFraterno'];
         $data['estado']='1';
         $this->fraterno_model->modificarfraterno($idFraterno,$data);
-        redirect('fraterno/deshabilitados','refresh');
+        redirect('fraterno/indexadm','refresh');
     }
     public function eliminardb()
     {
@@ -257,7 +282,7 @@ class Fraterno extends CI_Controller
 
         $this->fraterno_model->modificarproductodb($idProducto,$data);
 
-        redirect('fraterno/indexlte','refresh');
+        redirect('fraterno/productos','refresh');
 
     } 
     public function habilitarproductobd()
@@ -266,7 +291,7 @@ class Fraterno extends CI_Controller
         $data['estado']='1';
 
         $this->fraterno_model->modificarproducto($idProducto,$data);
-        redirect('fraterno/deshabilitados','refresh');
+        redirect('fraterno/productosdeshabilitados','refresh');
 
     }
     
@@ -274,7 +299,7 @@ class Fraterno extends CI_Controller
     {
         $idProducto=$_POST['idProducto'];// tal como está en el formulario
         $this->fraterno_model->eliminarproducto($idProducto);
-        redirect('fraterno/indexlte','refresh');
+        redirect('fraterno/productos','refresh');
     }
 
     //para crud actividad
@@ -319,10 +344,10 @@ class Fraterno extends CI_Controller
         $data['nombre']=$_POST['nombre'];
         $data['fecha']=$_POST['fecha'];
         $data['lugar']=$_POST['lugar'];
-        //$data['nota']=$_POST['nota'];
+        
 
         $this->fraterno_model->modificaractividad($idActividad,$data);
-        redirect('fraterno/modificaractividad','refresh');
+        redirect('fraterno/actividades','refresh');
     }
     public function deshabilitaractividadbd()
     {
@@ -330,7 +355,7 @@ class Fraterno extends CI_Controller
         $data['estado']='0';
 
         $this->fraterno_model->modificaractividaddb($idActividad,$data);
-        redirect('fraterno/listaactividades','refresh');
+        redirect('fraterno/actividades','refresh');
     }
     public function habilitaractividadbd()
     {
@@ -338,7 +363,7 @@ class Fraterno extends CI_Controller
         $data['estado']='1';
 
         $this->fraterno_model->modificaractividad($idActividad,$data);
-        redirect('fraterno/deshabilitados','refresh');
+        redirect('fraterno/actividades','refresh');
     }
 
     public function eliminaractividaddb()
@@ -355,8 +380,8 @@ class Fraterno extends CI_Controller
         if ($this->session->userdata('login')) {
             $data['idFraterno'] = $_POST['idFraterno'];
             $this->load->view('inclte/cabecera');
-            $this->load->view('inclte/menusuperior');
             $this->load->view('inclte/menulateral');
+            $this ->load->view('inclte/menusuperior');
             $this->load->view('subirform', $data);
             $this->load->view('inclte/pie');
         } else {

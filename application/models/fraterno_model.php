@@ -16,11 +16,19 @@
             return $this->db->get();
         }
 
+
         public function listaactividades()
         {
             $this->db->select('*');
             $this->db->from('actividad');
            $this->db->where('estado','1');
+            return $this->db->get();
+        }
+        public function listaactividaddeshabilitada()
+        {
+            $this->db->select('*');
+            $this->db->from('actividad');
+           $this->db->where('estado','0');
             return $this->db->get();
         }
 
@@ -29,6 +37,13 @@
             $this->db->select('*');
             $this->db->from('producto');
            $this->db->where('estado','1');
+            return $this->db->get();
+        }
+        public function listaproductodeshabilitado()
+        {
+            $this->db->select('*');
+            $this->db->from('producto');
+           $this->db->where('estado','0');
             return $this->db->get();
         }
 
@@ -104,7 +119,7 @@
             $this->db->delete('producto');
             //$data es un array relacional, se contruye en agregabd
         }
-        public function recuperarproductos($idProducto)
+        public function recuperarproducto($idProducto)
         {
             $this->db->select('*');
             $this->db->from('producto');
@@ -113,15 +128,16 @@
         }
 
         public function getProductByRopaAndTalla($ropa, $talla)
-{
-    return $this->db->get_where('producto', array('ropa' => $ropa, 'talla' => $talla))->row();
-}
+        {
+         return $this->db->get_where('producto', array('ropa' => $ropa, 'talla' => $talla))->row();
+        }
 
-public function actualizarProducto($idProducto, $data)
-{
-    $this->db->where('idProducto', $idProducto);
-    $this->db->update('producto', $data);
-}
+        public function actualizarProducto($idProducto, $data)
+        {
+             $this->db->where('idProducto', $idProducto);
+             $this->db->update('producto', $data);
+        }
 
+        
 
     }
