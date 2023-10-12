@@ -93,6 +93,26 @@
         <script src="<?php echo base_url();?>adminlte/assets/plugins/metrojs/MetroJs.min.js"></script>
         <script src="<?php echo base_url();?>adminlte/assets/js/modern.js"></script>
         <script src="<?php echo base_url();?>adminlte/assets/js/pages/dashboard.js"></script>
+        <script src="<?php echo base_url();?>adminlte/assets/plugins/product-preview-slider/js/jquery.mobile.min.js"></script>
+        <script src="<?php echo base_url();?>adminlte/assets/plugins/product-preview-slider/js/main.js"></script>
+    
+        <script src="<?php echo base_url();?>adminlte/assets/plugins/jquery/jquery-2.1.4.min.js"></script>
+        <script src="<?php echo base_url();?>adminlte/assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+        <script src="<?php echo base_url();?>adminlte/assets/plugins/pace-master/pace.min.js"></script>
+        <script src="<?php echo base_url();?>adminlte/assets/plugins/jquery-blockui/jquery.blockui.js"></script>
+        <script src="<?php echo base_url();?>adminlte/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <script src="<?php echo base_url();?>adminlte/assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+        <script src="<?php echo base_url();?>adminlte/assets/plugins/switchery/switchery.min.js"></script>
+        <script src="<?php echo base_url();?>adminlte/assets/plugins/uniform/jquery.uniform.min.js"></script>
+        <script src="<?php echo base_url();?>adminlte/assets/plugins/offcanvasmenueffects/js/classie.js"></script>
+        <script src="<?php echo base_url();?>adminlte/assets/plugins/offcanvasmenueffects/js/main.js"></script>
+        <script src="<?php echo base_url();?>adminlte/assets/plugins/waves/waves.min.js"></script>
+        <script src="<?php echo base_url();?>adminlte/assets/plugins/3d-bold-navigation/js/main.js"></script>		
+		<script src="<?php echo base_url();?>adminlte/assets/plugins/product-preview-slider/js/jquery.mobile.min.js"></script>
+        <script src="<?php echo base_url();?>adminlte/assets/plugins/product-preview-slider/js/main.js"></script>
+        <script src="<?php echo base_url();?>adminlte/assets/plugins/toastr/toastr.min.js"></script>
+        <script src="<?php echo base_url();?>adminlte/assets/js/modern.min.js"></script>
+        <script src="<?php echo base_url();?>adminlte/assets/js/pages/shop.js"></script>
         
     </body>
 </html>

@@ -146,10 +146,22 @@ class Fraterno extends CI_Controller
         $this ->load->view('inclte/cabecera');
         $this ->load->view('inclte/menulateral');
         $this ->load->view('inclte/menusuperior');
-		$this->load->view('venta_formulario',$data);
+		$this->load->view('venta_formulario copy',$data);
         $this ->load->view('inclte/pie');
 		
 	}
+    public function ventas()
+    {
+        $lista=$this->fraterno_model->listaproductos();
+        $data['producto']=$lista;
+
+        $this ->load->view('inclte/cabecera');
+        $this ->load->view('inclte/menulateral');
+        $this ->load->view('inclte/menusuperior');
+        $this->load->view('productos_listalte',$data);
+        $this ->load->view('inclte/pie');
+        
+    }
 
     
     // para crud fraternos

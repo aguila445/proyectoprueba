@@ -34,13 +34,15 @@
                         <!-- /.card-header -->
                         <div class="panel-body" class="table-responsive" >
                             <?php echo form_open_multipart('fraterno/agregardb'); ?>
+                            <label for="nombreFraterno">Fraterno</label>
+                            <input type="text" name="nombreFraterno" id="" placeholder="Escriba el nombre del fraterno" class="form-control">
+                            <br>
+                            <br>
                             <div class="form-group">
-                                <label for="producto">Producto</label>
-                                <input type="text" name="nombreProducto" id="" placeholder="Escriba el nombre del producto" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="ropa">Ropa</label>
-                                <select name="ropa" id="" class="form-control" required>
+                                <label for="ropa">producto</label>
+                                <select name="nombre" id="" class="form-control" required>
+                                    <option value="Camiseta">traje completo varon</option>
+                                    <option value="Camiseta">traje completo mujer</option>
                                     <option value="Camiseta">sombrero varon</option>
                                     <option value="Pantalón">sombrero mujer</option>
                                     <option value="Camiseta">blusa</option>
@@ -57,14 +59,17 @@
                                     <!-- Agrega aquí las opciones necesarias -->
                                 </select>
                             </div>
+                            <br>
                             <div class="form-group">
                                 <label for="precio">Precio</label>
                                 <input type="number" name="precio" id="precio" class="form-control" required>
                             </div>
+                            <br>
                             <div class="form-group">
                                 <label for="cantidad">Cantidad</label>
                                 <input type="number" name="cantidad" id="cantidad" class="form-control" required>
                             </div>
+                            <br>
                             <div class="form-group">
                                 <label for="talla">Talla</label>
                                 <select name="talla" id="talla" class="form-control" required>
@@ -76,6 +81,7 @@
                                     <!-- Agrega aquí las opciones necesarias -->
                                 </select>
                             </div>
+                            <br>
                             <!-- ... Otros campos ... -->
 
                             <button type="button" class="btn btn-primary" id="agregarProducto">Agregar Producto</button>
@@ -85,7 +91,6 @@
                                 <thead>
                                     <tr>
                                         <th>Producto</th>
-                                        <th>Ropa</th>
                                         <th>Precio</th>
                                         <th>Talla</th>
                                         <th>Cantidad</th>
@@ -94,50 +99,38 @@
                                 </thead>
                                 <tbody>
                                     <!-- Aquí se agregan los productos de forma dinámica -->
+
                                 </tbody>
+                                <tfoot>
+                                <tr>
+                                    <td colspan="5" align="right"><strong>Total:</strong></td>
+                                    <td id="totalVenta">0.00</td>
+                                </tr>
+                                </tfoot>
                             </table>
 
-                            <div class="form-group">
-                                <label for="sucursal">Sucursal</label>
-                                <select name="sucursal" id="sucursal" class="form-control">
-                                    <option value="Central">CENTRAL</option>
-                                    <option value="Sucursal A">USA</option>
-                                    <option value="Sucursal B">SANTA CRUZ</option>
-                                    <option value="Sucursal A">LA PAZ</option>
-                                    <option value="Sucursal B">ORURO</option>
-                                    <option value="Sucursal A">POTOSI</option>
-                                    <option value="Sucursal B">UYUNI</option>
-                                    <option value="Sucursal A">SUCRE</option>
-                                    <option value="Sucursal B">JULIACA</option>
-                                    <option value="Sucursal A">ARGENTINA</option>
-                                    <option value="Sucursal B">IQUIQUE</option>
-                                    <option value="Sucursal A">CALAMA</option>
-                                    <option value="Sucursal B">ARICA</option>
-                                    <option value="Sucursal A">SANTIAGO</option>
-                                    <option value="Sucursal B">GRANADA</option>
-                                    <option value="Sucursal A">MURCIA</option>
-                                    <option value="Sucursal B">BARCELONA</option>
-                                    <option value="Sucursal A">SAN JULIAN</option>
-                                    <option value="Sucursal B">BRASIL</option>
-                                    <!-- Agrega aquí las opciones necesarias -->
-                                </select>
-                            </div>
+                  
 
                             <!-- Botón para realizar la venta -->
+                           <div>
+                            <br>
+                            <br>
+                            <button type="button" class="btn btn-success" id="realizarVenta">Cancelar</button>
                             <button type="button" class="btn btn-success" id="realizarVenta">Realizar Venta</button>
-
+                            </div>
                             <?php echo form_close(); ?>
                         </div>
                         <!-- /.card-body -->
-<script>
+                        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <script>
     $(document).ready(function() {
         // Arreglo para almacenar los productos agregados
         var productos = [];
+        var totalVenta = 0; // Inicializa el total en 0
 
         // Manejar el clic en el botón "Agregar Producto"
         $("#agregarProducto").click(function() {
             var producto = $("#producto").val();
-            var ropa = $("#ropa").val();
             var precio = parseFloat($("#precio").val());
             var cantidad = parseInt($("#cantidad").val());
             var talla = $("#talla").val();
@@ -147,7 +140,6 @@
             $("#tablaProductos tbody").append(`
                 <tr>
                     <td>${producto}</td>
-                    <td>${ropa}</td>
                     <td>${precio.toFixed(2)}</td>
                     <td>${talla}</td>
                     <td>${cantidad}</td>
@@ -158,16 +150,20 @@
             // Agregar el producto al arreglo de productos
             productos.push({
                 producto: producto,
-                ropa: ropa,
                 precio: precio,
                 talla: talla,
                 cantidad: cantidad,
                 subtotal: subtotal
             });
 
+            // Calcular el total
+            totalVenta += subtotal;
+
+            // Actualizar el total en la tabla
+            $("#totalVenta").text(totalVenta.toFixed(2));
+
             // Limpiar los campos
             $("#producto").val("");
-            $("#ropa").val("");
             $("#precio").val("");
             $("#talla").val("");
             $("#cantidad").val("");
@@ -197,6 +193,7 @@
         });
     });
 </script>
+
                     </div>
                     <!-- /.card -->
                 </div>

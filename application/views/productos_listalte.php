@@ -24,7 +24,7 @@
             </DIV>   
             <DIV> 
                 <br>
-                <a href="<?php echo base_url(); ?>index.php/fraterno/fraternos">
+                <a href="<?php echo base_url(); ?>index.php/fraterno/indexadm">
                   <button type="button" class="btn btn-primary">LISTA DE FRATERNOS</button>
                 </a>
                 <a href="<?php echo base_url(); ?>index.php/fraterno/deshabilitados">
@@ -76,7 +76,6 @@
                                             <tr>
                                               <th>n°</th> 
                                               <th>producto</th>
-                                              <th>ropa</th>
                                               <th>precio </th>
                                               <th>talla</th>
                                               <th>cantidad</th>
@@ -96,7 +95,6 @@
                         <tr>
                           <td><?php echo $indice;?></td>
                           <td><?php echo $row->nombreProducto;?></td>
-                          <td><?php echo $row->ropa;?></td>
                           <td><?php echo $row->precio;?></td>
                           <td><?php echo $row->talla;?></td>
                           <td><?php echo $row->cantidad;?></td>

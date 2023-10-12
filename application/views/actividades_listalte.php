@@ -26,7 +26,7 @@
             </DIV>   
             <DIV> 
                 <br>
-                <a href="<?php echo base_url(); ?>index.php/fraterno/fraternos">
+                <a href="<?php echo base_url(); ?>index.php/fraterno/indexadm">
                   <button type="button" class="btn btn-primary">LISTA DE FRATERNOS</button>
                 </a>
                 <a href="<?php echo base_url(); ?>index.php/fraterno/deshabilitados">

@@ -43,7 +43,6 @@
                     </div>
                     <input type="hidden" name="idFraterno" id=""class="form-control" value="<?php echo $row->idFraterno;?>">
                     <input type="text" name="nombreProducto" id="" placeholder="Escriba el nombre nuevo" class="form-control" value="<?php echo $row->nombreProducto;?>">
-                    <input type="text" name="ropa" id="" placeholder="Escriba el tipo de ropa nuevo" class="form-control" value="<?php echo $row->ropa;?>">
                     <input type="text" name="precio" id="" placeholder="Escriba el nuevo precio" class="form-control" value="<?php echo $row->precio;?>">
                     <input type="text" name="talla" id="" placeholder="Escriba la talla nueva" class="form-control" value="<?php echo $row->talla;?>">
                     <input type="text" name="cantidad" id="" placeholder="Escriba la cantidad nueva" class="form-control" value="<?php echo $row->cantidad;?>">

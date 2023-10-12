@@ -27,7 +27,8 @@
         <link href="<?php echo base_url();?>adminlte/assets/plugins/weather-icons-master/css/weather-icons.min.css" rel="stylesheet" type="text/css"/>	
         <link href="<?php echo base_url();?>adminlte/assets/plugins/metrojs/MetroJs.min.css" rel="stylesheet" type="text/css"/>	
         <link href="<?php echo base_url();?>adminlte/assets/plugins/toastr/toastr.min.css" rel="stylesheet" type="text/css"/>	
-        	
+        <link href="<?php echo base_url();?>adminlte/assets/plugins/checkoutconcepts/css/checkout-cornerflat.css" rel="stylesheet" type="text/css" />
+        
         <!-- Theme Styles -->
         <link href="<?php echo base_url();?>adminlte/assets/css/modern.min.css" rel="stylesheet" type="text/css"/>
         <link href="<?php echo base_url();?>adminlte/assets/css/themes/green.css" class="theme-color" rel="stylesheet" type="text/css"/>
@@ -42,21 +43,32 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+        <style>
+            body {
+                background-image: url('<?php echo base_url();?>adminlte/assets/images/logo.jpg'); /* Ruta de la imagen de fondo */
+                background-size: 40%; /* Ajustar la imagen al tamaño de la ventana del navegador */
+                background-position: center;
+                background-repeat: no-repeat; /* Evitar la repetición de la imagen */
+                background-attachment: fixed; /* Fijar la imagen de fondo */
+                opacity: 0.92; /* Opacidad de la imagen de fondo (marca de agua) */
+            }
+        </style>
+
         
     </head>
-    <body class="page-header-fixed">
+    <body class="page-header-fixed" >
         <div class="overlay"></div>
         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s1">
             <h3><span class="pull-left">Chat</span><a href="javascript:void(0);" class="pull-right" id="closeRight"><i class="fa fa-times"></i></a></h3>
             <div class="slimscroll">
-                <a href="javascript:void(0);" class="showRight2"><img src="<?php echo base_url();?>adminlte/assets/images/avatar2.png" alt=""><span>Sandra smith<small>Hi! How're you?</small></span></a>
-                <a href="javascript:void(0);" class="showRight2"><img src="<?php echo base_url();?>adminlte/assets/images/avatar3.png" alt=""><span>Amily Lee<small>Hi! How're you?</small></span></a>
-                <a href="javascript:void(0);" class="showRight2"><img src="<?php echo base_url();?>adminlte/assets/images/avatar4.png" alt=""><span>Christopher Palmer<small>Hi! How're you?</small></span></a>
-                <a href="javascript:void(0);" class="showRight2"><img src="<?php echo base_url();?>adminlte/assets/images/avatar5.png" alt=""><span>Nick Doe<small>Hi! How're you?</small></span></a>
-                <a href="javascript:void(0);" class="showRight2"><img src="<?php echo base_url();?>adminlte/assets/images/avatar2.png" alt=""><span>Sandra smith<small>Hi! How're you?</small></span></a>
-                <a href="javascript:void(0);" class="showRight2"><img src="<?php echo base_url();?>adminlte/assets/images/avatar3.png" alt=""><span>Amily Lee<small>Hi! How're you?</small></span></a>
-                <a href="javascript:void(0);" class="showRight2"><img src="<?php echo base_url();?>adminlte/assets/images/avatar4.png" alt=""><span>Christopher Palmer<small>Hi! How're you?</small></span></a>
-                <a href="javascript:void(0);" class="showRight2"><img src="<?php echo base_url();?>adminlte/assets/images/avatar5.png" alt=""><span>Nick Doe<small>Hi! How're you?</small></span></a>
+                <a href="<?php echo base_url();?>adminlte/javascript:void(0);" class="showRight2"><img src="<?php echo base_url();?>adminlte/assets/images/avatar2.png" alt=""><span>Sandra smith<small>Hi! How're you?</small></span></a>
+                <a href="<?php echo base_url();?>adminlte/javascript:void(0);" class="showRight2"><img src="<?php echo base_url();?>adminlte/assets/images/avatar3.png" alt=""><span>Amily Lee<small>Hi! How're you?</small></span></a>
+                <a href="<?php echo base_url();?>adminlte/javascript:void(0);" class="showRight2"><img src="<?php echo base_url();?>adminlte/assets/images/avatar4.png" alt=""><span>Christopher Palmer<small>Hi! How're you?</small></span></a>
+                <a href="<?php echo base_url();?>adminlte/javascript:void(0);" class="showRight2"><img src="<?php echo base_url();?>adminlte/assets/images/avatar5.png" alt=""><span>Nick Doe<small>Hi! How're you?</small></span></a>
+                <a href="<?php echo base_url();?>adminlte/javascript:void(0);" class="showRight2"><img src="<?php echo base_url();?>adminlte/assets/images/avatar2.png" alt=""><span>Sandra smith<small>Hi! How're you?</small></span></a>
+                <a href="<?php echo base_url();?>adminlte/javascript:void(0);" class="showRight2"><img src="<?php echo base_url();?>adminlte/assets/images/avatar3.png" alt=""><span>Amily Lee<small>Hi! How're you?</small></span></a>
+                <a href="<?php echo base_url();?>adminlte/javascript:void(0);" class="showRight2"><img src="<?php echo base_url();?>adminlte/assets/images/avatar4.png" alt=""><span>Christopher Palmer<small>Hi! How're you?</small></span></a>
+                <a href="<?php echo base_url();?>adminlte/javascript:void(0);" class="showRight2"><img src="<?php echo base_url();?>adminlte/assets/images/avatar5.png" alt=""><span>Nick Doe<small>Hi! How're you?</small></span></a>
             </div>
 		</nav>
         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
@@ -110,7 +122,7 @@
 		</nav>
         <div class="menu-wrap">
             <nav class="profile-menu">
-                <div class="profile"><img src="<?php echo base_url();?>adminlte/assets/images/profile-menu-image.png" width="60" alt="David Green"/><span>David Green</span></div>
+                <div class="profile"><img src="<?php echo base_url();?>adminlte/assets/images/profile-menu-image.png" width="60" alt="David Green"/><span>viva el salay</span></div>
                 <div class="profile-menu-list">
                     <a href="#"><i class="fa fa-star"></i><span>Favorites</span></a>
                     <a href="#"><i class="fa fa-bell"></i><span>Alerts</span></a>

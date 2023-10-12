@@ -2,7 +2,7 @@
             <div class="navbar">
                 <div class="navbar-inner">
                     <div class="sidebar-pusher">
-                        <a href="javascript:void(0);" class="waves-effect waves-button waves-classic push-sidebar">
+                        <a href="<?php echo base_url();?>adminlte/javascript:void(0);" class="waves-effect waves-button waves-classic push-sidebar">
                             <i class="fa fa-bars"></i>
                         </a>
                     </div>
@@ -11,7 +11,7 @@
                     </div><!-- Logo Box -->
                     
                     <div class="search-button" >
-                        <a href="javascript:void(0);" class="waves-effect waves-button waves-classic show-search"><i class="fa fa-search"></i></a>
+                        <a href="<?php echo base_url();?>adminlte/javascript:void(0);" class="waves-effect waves-button waves-classic show-search"><i class="fa fa-search"></i></a>
                     </div>
                     <div class="topmenu-outer" >
                         <div class="top-menu" class="logo-box">
@@ -108,7 +108,7 @@
                                     <a href="javascript:void(0);" class="waves-effect waves-button waves-classic show-search"><i class="fa fa-search"></i></a>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle waves-effect waves-button waves-classic" data-toggle="dropdown"><i class="fa fa-envelope"></i><span class="badge badge-success pull-right">4</span></a>
+                                    <a href="#" class="dropdown-toggle waves-effect waves-button waves-classic" data-toggle="dropdown"><i class="fa fa-envelope"></i><span class="badge badge-success pull-right"></span></a>
                                     <ul class="dropdown-menu title-caret dropdown-lg" role="menu">
                                         <li><p class="drop-title">You have 4 new  messages !</p></li>
                                         <li class="dropdown-menu-list slimscroll messages">
@@ -167,7 +167,7 @@
                                     </ul>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle waves-effect waves-button waves-classic" data-toggle="dropdown"><i class="fa fa-bell"></i><span class="badge badge-success pull-right">3</span></a>
+                                    <a href="#" class="dropdown-toggle waves-effect waves-button waves-classic" data-toggle="dropdown"><i class="fa fa-bell"></i><span class="badge badge-success pull-right"></span></a>
                                     <ul class="dropdown-menu title-caret dropdown-lg" role="menu">
                                         <li><p class="drop-title">You have 3 pending tasks !</p></li>
                                         <li class="dropdown-menu-list slimscroll tasks">
@@ -200,8 +200,8 @@
                                 </li>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle waves-effect waves-button waves-classic" data-toggle="dropdown">
-                                        <span class="user-name">David<i class="fa fa-angle-down"></i></span>
-                                        <img class="img-circle avatar" src="assets/images/avatar1.png" width="40" height="40" alt="">
+                                        <span class="user-name">viva el salay<i class="fa fa-angle-down"></i></span>
+                                        <img class="img-circle avatar" src="<?php echo base_url(); ?>adminlte/assets/images/logo.png" width="40" height="40" alt="">
                                     </a>
                                     <ul class="dropdown-menu dropdown-list" role="menu">
                                         <li role="presentation"><a href="profile.html"><i class="fa fa-user"></i>Profile</a></li>
@@ -209,7 +209,7 @@
                                         <li role="presentation"><a href="inbox.html"><i class="fa fa-envelope"></i>Inbox<span class="badge badge-success pull-right">4</span></a></li>
                                         <li role="presentation" class="divider"></li>
                                         <li role="presentation"><a href="lock-screen.html"><i class="fa fa-lock"></i>Lock screen</a></li>
-                                        <li role="presentation"><a href="<?php echo base_url(); ?>index.php/usuario/logout"></i>Log out</a></li>
+                                        <li role="presentation"><a href="<?php echo base_url(); ?>index.php/usuario/logout"></i>SALIR</a></li>
                                     </ul>
                                 </li>
                                 <li>

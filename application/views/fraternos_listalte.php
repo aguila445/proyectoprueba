@@ -131,7 +131,7 @@
                                     <input type="hidden" name="idFraterno" value="<?php echo $row->idFraterno;?>">
                                     <!--Se ocupa el rol hidden para ocultar los id en la página-->
 
-                                    <button type="submit" class="btn btn-primary">modificar</button>
+                                    <button type="submit" class="btn btn-success">modificar</button>
                                 <?php
                                     echo form_close()
                                 ?> 

@@ -38,7 +38,6 @@
                     <tr>
                     <th>n°</th> 
                       <th>producto</th>
-                      <th>ropa</th>
                       <th>precio </th>
                       <th>talla</th>
                       <th>cantidad</th>
@@ -54,7 +53,6 @@
                     <tr>
                     <td><?php echo $indice;?></td>
                           <td><?php echo $row->nombreProducto;?></td>
-                          <td><?php echo $row->ropa;?></td>
                           <td><?php echo $row->precio;?></td>
                           <td><?php echo $row->talla;?></td>
                           <td><?php echo $row->cantidad;?></td>
