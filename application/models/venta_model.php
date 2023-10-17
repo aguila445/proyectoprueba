@@ -27,4 +27,14 @@ class Venta_model extends CI_Model {
         return $this->db->get();
     }
     
+    public function buscar_productos($producto) {
+        // Realiza la búsqueda de productos en la base de datos
+        $this->db->like('nombreProducto', $producto);
+        $this->db->select('nombreProducto, precio');
+        $query = $this->db->get('producto');
+    
+        return $query->result();
+    }
+    
+    
 }

@@ -1,42 +1,34 @@
-<!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>FORMULARIO DE ACTIVIDAD</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">DataTables</li>
-            </ol>
-          </div>
-        </div>
-      </div><!-- /.container-fluid -->
-    </section>
-
-    <!-- Main content -->
-    <section class="content">
+<!-- Page Sidebar -->
+<div class="page-inner">
+                <div class="checkout">        
+                </div>
+                <div class="page-title">
+                    <h3>AGREGAR ACTIVIDAD NUEVA</h3>
+                    <div class="page-breadcrumb">
+                        <ol class="breadcrumb">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#">Extra</a></li>
+                            <li class="active">Shop</li>
+                        </ol>
+                    </div>
+                </div>
+                <div id="main-wrapper">
+  <!-- Main content -->
+  <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-12">
-            <div class="card">
-              <div class="card-header">
-                <h3 class="card-title"> FORMULARIO DE CREACION </h3>
-              </div>
-              <br>
-                <a href="<?php echo base_url(); ?>index.php/fraterno/indexlte">
-                    <button type="button" class="btn btn-warning">IR HOME</button>
-                </a>
+          <div class="col-md-8">
+           
+                
               <!-- /.card-header -->
               <div class="card-body">
                 <?php
                     echo form_open_multipart('fraterno/agregaractividaddb') 
                 ?> 
                     <input type="text" name="nombre" id="" placeholder="Escriba la actividad" class="form-control">
+                    <br>
                     <input type="date" name="fecha" id="" placeholder="Escriba la fecha" class="form-control">
+                    <br>
                     <input type="text" name="lugar" id="" placeholder="Escriba el lugar del evento" class="form-control">
                     <br>
                     <button type="submit" class="btn btn-primary">AGREGAR</button>
@@ -57,6 +49,6 @@
       </div>
       <!-- /.container-fluid -->
     </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
+                           
+                        </div>
+                        <!-- /.card-body -->

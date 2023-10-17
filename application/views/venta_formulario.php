@@ -39,8 +39,8 @@
                             <br>
                             <br>
                             <div class="form-group">
-                                <label for="ropa">producto</label>
-                                <select name="nombre" id="" class="form-control" required>
+                                <label for="nombreProducto">producto</label>
+                                <select name="nombreProducto" id="" class="form-control" required>
                                     <option value="Camiseta">traje completo varon</option>
                                     <option value="Camiseta">traje completo mujer</option>
                                     <option value="Camiseta">sombrero varon</option>
@@ -122,7 +122,7 @@
                         </div>
                         <!-- /.card-body -->
                         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
- <script>
+                        <script>
     $(document).ready(function() {
         // Arreglo para almacenar los productos agregados
         var productos = [];
@@ -171,20 +171,20 @@
 
         // Manejar el clic en el botón "Realizar Venta"
         $("#realizarVenta").click(function() {
-            // Obtener el valor de la sucursal
-            var sucursal = $("#sucursal").val();
+            // Obtener el nombre del cliente (fraterno)
+            var nombreFraterno = $("#nombreFraterno").val();
 
-            // Validar que se haya seleccionado una sucursal
-            if (sucursal === "") {
-                alert("Selecciona una sucursal antes de realizar la venta.");
+            // Validar que se haya ingresado un nombre de cliente (fraterno)
+            if (nombreFraterno === "") {
+                alert("Ingresa el nombre del cliente (fraterno) antes de realizar la venta.");
                 return;
             }
 
-            // Enviar los productos al controlador para procesar la venta
+            // Enviar los productos y el nombre del cliente al controlador para procesar la venta
             $.ajax({
                 url: "<?php echo base_url(); ?>index.php/fraterno/realizarventa", // Reemplaza con la URL correcta
                 type: "POST",
-                data: { productos: productos, sucursal: sucursal },
+                data: { productos: productos, nombreFraterno: nombreFraterno },
                 success: function(response) {
                     // Manejar la respuesta del servidor, por ejemplo, mostrar un mensaje de confirmación
                     alert("Venta realizada con éxito.");
@@ -193,6 +193,7 @@
         });
     });
 </script>
+
 
                     </div>
                     <!-- /.card -->

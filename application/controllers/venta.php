@@ -39,25 +39,22 @@ class Venta extends CI_Controller {
 
     public function procesarventa() {
         // Obtiene los datos del formulario
-        $producto = $this->input->post('producto');
-        $ropa = $this->input->post('ropa');
+        $nombreProducto = $this->input->post('nombreProducto');
         $precio = $this->input->post('precio');
         $cantidad = $this->input->post('cantidad');
         $talla = $this->input->post('talla');
-        $sucursal = $this->input->post('sucursal');
 
         // Calcula el total
         $total = $precio * $cantidad;
 
         // Almacena los datos en un arreglo
         $venta_data = array(
-            'producto' => $producto,
-            'ropa' => $ropa,
+            'nombreProducto' => $nombreProducto,
             'precio' => $precio,
             'cantidad' => $cantidad,
             'talla' => $talla,
             'total' => $total,
-            'sucursal' => $sucursal
+           
         );
 
         // Llama al modelo para agregar la venta a la base de datos
@@ -73,5 +70,32 @@ class Venta extends CI_Controller {
         // Carga la vista de confirmación
         $this->load->view('confirmacionventa');
     }
+    public function obtener_precio_producto() {
+        if ($this->input->post('producto')) {
+            $producto = $this->input->post('producto');
+    
+            // Llama al modelo para obtener el precio del producto
+            $precio = $this->venta_model->obtener_precio_producto($producto);
+    
+            if ($precio !== false) {
+                echo $precio;
+            } else {
+                echo 'Precio no disponible';
+            }
+        }
+    }
+    public function agregar_venta($venta_data) {
+        // Inserta los datos en la tabla 'ventas'
+        $this->db->insert('ventas', $venta_data);
+    }
+
+    public function buscar_producto() {
+        $producto = $this->input->post('producto');
+        // Llama a la función del modelo para buscar productos
+        $resultados = $this->venta_model->buscar_productos($producto);
+        // Devuelve los resultados en formato JSON
+        echo json_encode($resultados);
+    }
+    
     
 }
