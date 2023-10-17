@@ -24,15 +24,16 @@ class Venta extends CI_Controller {
         // Carga la vista formulario_venta.php
         $this->load->view('venta_formulario');
     }
+
     public function venta()
 	{
-        $lista=$this->fraterno_model->realizarventa();
+        $lista=$this->venta_model->realizarventa();
         $data['fraterno']=$lista;
 
         $this ->load->view('inclte/cabecera');
         $this ->load->view('inclte/menulateral');
         $this ->load->view('inclte/menusuperior');
-		$this->load->view('venta_formulario copy',$data);
+		$this->load->view('venta_formulario',$data);
         $this ->load->view('inclte/pie');
 		
 	}

@@ -10,54 +10,31 @@
                         </ol>
                     </div>
                 </div>
+    <div id="main-wrapper">
                 <DIV>
-                <br>
                 <a href="<?php echo base_url();?>index.php/fraterno/agregar">
                     <button type="button" class="btn btn-primary">CREAR FRATERNO</button>
                 </a>
-                <a href="<?php echo base_url();?>index.php/fraterno/agregaractividad">
-                    <button type="button" class="btn btn-primary">CREAR ACTIVIDAD</button>
-                </a>
-                <a href="<?php echo base_url();?>index.php/fraterno/agregarproducto">
-                    <button type="button" class="btn btn-primary">CREAR PRODUCTO</button>
-                </a>
-            </DIV>   
-            <DIV> 
-                <br>
-                <a href="<?php echo base_url(); ?>index.php/fraterno/indexadm">
-                  <button type="button" class="btn btn-primary">LISTA DE FRATERNOS</button>
-                </a>
-                <a href="<?php echo base_url(); ?>index.php/fraterno/deshabilitados">
-                  <button type="button" class="btn btn-primary">LISTA DESHABILITADOS</button>
-                </a>
-                <a href="<?php echo base_url(); ?>index.php/fraterno/actividades">
-                  <button type="button" class="btn btn-primary">LISTA ACTIVIDADES</button>
-                </a>
-                <a href="<?php echo base_url(); ?>index.php/fraterno/productos">
-                  <button type="button" class="btn btn-primary">LISTA PRODUCTOS</button>
-                </a>
-            </DIV>
-            <div>
-                <BR>
-                <a href="<?php echo base_url(); ?>index.php/fraterno/venta">
-                  <button type="button" class="btn btn-primary">REALIZAR VENTA</button>
-                </a>
-                <a href="<?php echo base_url(); ?>index.php/fraterno/actividades">
-                  <button type="button" class="btn btn-primary">VER ACTIVIDAD</button>
-                </a>
-            </DIV>
+                </DIV>   
+                <DIV> 
+                    <a href="<?php echo base_url(); ?>index.php/fraterno/deshabilitados">
+                    <button type="button" class="btn btn-secondary">ver a los deshabilitados</button>
+                    </a>  
+                </DIV>
+           
+            <!--
           <DIV>
                 <br>
                 <a href="<?php echo base_url(); ?>index.php/usuario/logout">
                   <button type="button" class="btn btn-warning">CERRAR SESION</button>
                 </a>
+               
                 <a href="<?php echo base_url();?>index.php/estdudiantelistaxls2" target="blank">
                 <button type="submit" class="btn btn-success">REPORTE EXCEL</button>        
-                </a>
-                </div>
+                </a> 
+                </div> -->
               
             <br>
-                <div id="main-wrapper">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="panel panel-white">
@@ -80,7 +57,7 @@
                                               <th>Eliminar</th>
                                             </tr>
                                           </thead>
-                                            <tbody>
+                                    <tbody>
                                             <?php
                     $indice=1;//CONTADOR CORRELATIVO
                         foreach($fraterno->result()as $row)
@@ -94,10 +71,9 @@
                           <td><?php echo $row->primerApellido;?></td>
                           <td><?php echo $row->segundoApellido;?></td>
                           <td><?php echo $row->nota;?></td>
-                         
-                         
+     
                           <!--Se ocupa subir fotos-->
-                          <td>
+                            <td>
                                     <?php
                                     $foto = $row->foto;
                                     if ($foto == "") {
@@ -120,7 +96,7 @@
                                     <?php
                                     echo form_close();
                                     ?>
-                                </td>
+                            </td>
                                 <!--final para fotos-->
 
                          <!-- <td> <!?php echo formatearFecha($row->creado);?></td> -->
@@ -135,8 +111,8 @@
                                 <?php
                                     echo form_close()
                                 ?> 
-                          </td>
-                          <td>
+                            </td>
+                            <td>
                                 <?php
                                     echo form_open_multipart('fraterno/deshabilitardb');
                                 ?>
@@ -144,10 +120,9 @@
                                   <button type="submit" class="btn btn-warning">deshabilitar</button>        
                                 <?php
                                     echo form_close();
-                                ?>  
-                                      
-                          </td>
-                          <td>
+                                ?>             
+                            </td>
+                            <td>
                                 <?php
                                     echo form_open_multipart('fraterno/eliminardb')
                                 ?>
@@ -158,16 +133,17 @@
                                     echo form_close()
                                 ?> 
                           </td>
-
                         </tr>
                     <?php
                     $indice++;
                     }
                     ?>
-                                </tbody>
-                        </div>
-                     </div>
+                    </tbody>
+                    </table>
+                    </div>
                 </div>
-                       
-        </div><!-- Row -->
+            </div>
+          </div>
+       </div>         
+</div><!-- Row -->
           

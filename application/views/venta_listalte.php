@@ -15,18 +15,7 @@
             <!--  id:<?php echo $this->session->userdata('idUsuario');?><br>-->
               rol:<?php echo $this->session->userdata('rol');?><br>
             </h4>
-            <DIV>
-                <br>
-                <a href="<?php echo base_url();?>index.php/fraterno/agregar">
-                    <button type="button" class="btn btn-primary">CREAR FRATERNO</button>
-                </a>
-                <a href="<?php echo base_url();?>index.php/fraterno/agregaractividad">
-                    <button type="button" class="btn btn-primary">CREAR ACTIVIDAD</button>
-                </a>
-                <a href="<?php echo base_url();?>index.php/fraterno/agregarproducto">
-                    <button type="button" class="btn btn-primary">CREAR PRODUCTO</button>
-                </a>
-            </DIV>   
+   
             <DIV> 
                 <br>
                 <a href="<?php echo base_url(); ?>index.php/fraterno/indexadm">
@@ -40,30 +29,16 @@
                 </a>
                 <br>
             </div>
-            <div>
-              <br>
-                <a href="<?php echo base_url(); ?>index.php/fraterno/deshabilitados">
-                  <button type="button" class="btn btn-primary">LISTA FRATERNOS DESHABILITADOS</button>
-                </a>
-                <a href="<?php echo base_url(); ?>index.php/fraterno/actividadesdeshabilitadas">
-                  <button type="button" class="btn btn-primary">LISTA ACTIVIDADES DESHABILITADOS</button>
-                </a>
-                <a href="<?php echo base_url(); ?>index.php/fraterno/productosdeshabilitados">
-                  <button type="button" class="btn btn-primary">LISTA PRODUCTOS DESHABILITADOS</button>
-                </a>
-                <br>
-            </DIV>
+
             <div>
                 <BR>
-                <a href="<?php echo base_url(); ?>index.php/venta/ventaformulario">
+                <a href="<?php echo base_url(); ?>index.php/venta/venta">
                   <button type="button" class="btn btn-primary">REALIZAR VENTA</button>
                 </a>
                 <a href="<?php echo base_url(); ?>index.php/venta/ventas">
                   <button type="button" class="btn btn-primary">LISTA DE VENTAS</button>
                 </a>
-                <a href="<?php echo base_url(); ?>index.php/fraterno/actividades">
-                  <button type="button" class="btn btn-primary">VER ACTIVIDAD</button>
-                </a>
+            
             </DIV>
                 <div>
                 <br>

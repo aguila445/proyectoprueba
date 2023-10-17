@@ -48,7 +48,7 @@
                                 
                             </ul> -->
                         </li>
-                        <li><a href="<?php echo base_url(); ?>index.php/fraterno/venta" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-gift"></span><p>VENTAS</p><!--<span class="arrow"></span> --></a>
+                        <li><a href="<?php echo base_url(); ?>index.php/venta/ventas" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-gift"></span><p>VENTAS</p><!--<span class="arrow"></span> --></a>
                          <!--   <ul class="sub-menu">
                                 <li><a href="table-static.html">Static Tables</a></li>
                                 <li><a href="table-responsive.html">Responsive Tables</a></li>

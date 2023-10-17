@@ -1,92 +1,72 @@
 <!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header" >
-        <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1>FORMULARIO DE VENTA</h1>
+<!-- Page Sidebar -->
+            <div class="page-inner">
+                <div class="checkout">
+                   
+                    
                 </div>
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">DataTables</li>
-                    </ol>
+                <div class="page-title">
+                    <h3>FORMULARIO DE VENTA</h3>
+                    <div class="page-breadcrumb">
+                        <ol class="breadcrumb">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#">Extra</a></li>
+                            <li class="active">Shop</li>
+                        </ol>
+                    </div>
                 </div>
-            </div>
-        </div><!-- /.container-fluid -->
-    </section>
+                <div id="main-wrapper">
+                    <div class="row">
+                        <div>
+                        <a href="<?php echo base_url(); ?>index.php/venta/ventas" style="float: right;">
+                        <button type="button" class="btn btn-primary">IR A LISTA DE VENTAS</button>
+                        </a>
 
-    <!-- Main content -->
-    <section class="content">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title"> FORMULARIO DE VENTAS </h3>
-                            <br>
-                            <a href="<?php echo base_url(); ?>index.php/fraterno/indexlte">
-                                <button type="button" class="btn btn-warning">IR HOME</button>
-                            </a>
                         </div>
-                        <br>
-                        <!-- /.card-header -->
+                        <div class="col-md-12">
                         <div class="panel-body" class="table-responsive" >
                             <?php echo form_open_multipart('fraterno/agregardb'); ?>
-                            <label for="nombreFraterno">Fraterno</label>
-                            <input type="text" name="nombreFraterno" id="" placeholder="Escriba el nombre del fraterno" class="form-control">
-                            <br>
-                            <br>
-                            <div class="form-group">
-                                <label for="nombreProducto">producto</label>
-                                <select name="nombreProducto" id="" class="form-control" required>
-                                    <option value="Camiseta">traje completo varon</option>
-                                    <option value="Camiseta">traje completo mujer</option>
-                                    <option value="Camiseta">sombrero varon</option>
-                                    <option value="Pantalón">sombrero mujer</option>
-                                    <option value="Camiseta">blusa</option>
-                                    <option value="Pantalón">pollera</option>
-                                    <option value="Camiseta">juste</option>
-                                    <option value="Pantalón">centro</option>
-                                    <option value="Camiseta">faja</option>
-                                    <option value="Pantalón">camisa</option>
-                                    <option value="Camiseta">zapatos varon</option>
-                                    <option value="Pantalón">zapatos mujer</option>
-                                    <option value="Camiseta">chaleco</option>
-                                    <option value="Pantalón">tullma</option>
-                                    <option value="Camiseta">otro</option>
-                                    <!-- Agrega aquí las opciones necesarias -->
-                                </select>
-                            </div>
-                            <br>
-                            <div class="form-group">
-                                <label for="precio">Precio</label>
-                                <input type="number" name="precio" id="precio" class="form-control" required>
-                            </div>
-                            <br>
-                            <div class="form-group">
-                                <label for="cantidad">Cantidad</label>
-                                <input type="number" name="cantidad" id="cantidad" class="form-control" required>
-                            </div>
-                            <br>
-                            <div class="form-group">
-                                <label for="talla">Talla</label>
-                                <select name="talla" id="talla" class="form-control" required>
-                                    <option value="S">P</option>
-                                    <option value="M">S</option>
-                                    <option value="S">M</option>
-                                    <option value="M">L</option>
-                                    <option value="S">XL</option>
-                                    <!-- Agrega aquí las opciones necesarias -->
-                                </select>
-                            </div>
+
+                     <label for="nombreFraterno">Fraterno</label>
+                     <input type="search" name="nombreFraterno" id="nombreFraterno" placeholder="Escriba el nombre del fraterno" class="form-control" style="width: 700px;">
+                      <div id="fraternoResultados"></div>
+                <br>
+                <label for="nombreProducto">Producto</label>
+                <input type="search" name="nombreProducto" id="nombreProducto" placeholder="Escriba el nombre del producto" class="form-control" style="width: 700px;">
+                
+                <div id="productoResultados"></div>
+                </div>
+
+                <div class="form-inline">
+                    <div class="form-group">
+                        <label for="precio">Precio</label>
+                        <input type="number" name="precio" id="precio" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cantidad">Cantidad</label>
+                        <input type="number" name="cantidad" id="cantidad" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="talla">Talla</label>
+                        <select name="talla" id="talla" class="form-control" required>
+                            <option value="S">P</option>
+                            <option value="M">S</option>
+                            <option value="S">M</option>
+                            <option value="M">L</option>
+                            <option value="S">XL</option>
+                            <!-- Agrega aquí las opciones necesarias -->
+                        </select>
+                    </div>
+</div>
+
                             <br>
                             <!-- ... Otros campos ... -->
-
-                            <button type="button" class="btn btn-primary" id="agregarProducto">Agregar Producto</button>
+<div>
+                            <button type="button" class="btn btn-info" id="agregarProducto">Agregar al pedido</button>
                             <br><br>
-
+</div>
                             <table class="table table-bordered" id="tablaProductos">
                                 <thead>
                                     <tr>
@@ -115,7 +95,7 @@
                            <div>
                             <br>
                             <br>
-                            <button type="button" class="btn btn-success" id="realizarVenta">Cancelar</button>
+                            <button type="button" class="btn btn-danger" id="cancelarVenta">Cancelar</button>
                             <button type="button" class="btn btn-success" id="realizarVenta">Realizar Venta</button>
                             </div>
                             <?php echo form_close(); ?>
@@ -130,8 +110,8 @@
 
         // Manejar el clic en el botón "Agregar Producto"
         $("#agregarProducto").click(function() {
-            var producto = $("#producto").val();
-            var precio = parseFloat($("#precio").val());
+            var nombreProducto = $("#nombreProducto").val();
+            var precio = parseFloat($("#precioProducto").text()); // Obten el precio del campo de precio
             var cantidad = parseInt($("#cantidad").val());
             var talla = $("#talla").val();
             var subtotal = precio * cantidad;
@@ -139,7 +119,7 @@
             // Agregar el producto a la tabla
             $("#tablaProductos tbody").append(`
                 <tr>
-                    <td>${producto}</td>
+                    <td>${nombreProducto}</td>
                     <td>${precio.toFixed(2)}</td>
                     <td>${talla}</td>
                     <td>${cantidad}</td>
@@ -149,7 +129,7 @@
 
             // Agregar el producto al arreglo de productos
             productos.push({
-                producto: producto,
+                nombreProducto: nombreProducto,
                 precio: precio,
                 talla: talla,
                 cantidad: cantidad,
@@ -163,8 +143,8 @@
             $("#totalVenta").text(totalVenta.toFixed(2));
 
             // Limpiar los campos
-            $("#producto").val("");
-            $("#precio").val("");
+            $("#nombreProducto").val("");
+            $("#precioProducto").text(""); // Reiniciar el precio
             $("#talla").val("");
             $("#cantidad").val("");
         });
@@ -191,22 +171,61 @@
                 }
             });
         });
+        
+        // Agregar un evento de entrada para el campo de búsqueda de producto
+        $('#nombreProducto').on('keyup', function() {
+            var producto = $(this).val();
+            if (producto.length >= 3) { // Asegura que al menos se ingresen 3 caracteres antes de buscar
+                // Realizar una solicitud AJAX para buscar productos a medida que el usuario escribe
+                $.ajax({
+                    url: 'venta/buscar_producto', // Controlador y función para buscar productos
+                    method: 'POST',
+                    data: { producto: producto },
+                    success: function(data) {
+                        // Mostrar los resultados en #productoResultados
+                        var resultados = JSON.parse(data);
+                        var resultadosHTML = '';
+                        for (var i = 0; i < resultados.length; i++) {
+                            var resultado = resultados[i];
+                            resultadosHTML += '<div class="resultado">' + resultado.nombreProducto + '</div>';
+                        }
+                        $('#productoResultados').html(resultadosHTML);
+                    }
+                });
+            } else {
+                $('#productoResultados').html(''); // Limpia los resultados si hay menos de 3 caracteres
+            }
+        });
+
+        // Agregar un manejador de clic para los resultados de búsqueda
+        $('#productoResultados').on('click', 'div.resultado', function() {
+            var productoSeleccionado = $(this).text();
+            
+            // Llenar el campo de búsqueda con el producto seleccionado
+            $('#nombreProducto').val(productoSeleccionado);
+            
+            // Realizar una solicitud AJAX para obtener el precio del producto
+            $.ajax({
+                url: "<?php echo base_url(); ?>index.php/fraterno/obtener_precio_producto", // Ruta a tu controlador o script para obtener el precio
+                method: 'POST',
+                data: { producto: productoSeleccionado },
+                success: function(data) {
+                    // Mostrar el precio en el campo de precio
+                    $("#precioProducto").text(data);
+                }
+            });
+            
+            // Limpiar los resultados de búsqueda
+            $('#productoResultados').html('');
+        });
     });
 </script>
 
 
-                    </div>
-                    <!-- /.card -->
-                </div>
-                <!-- /.col -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
-</div>
-<!-- /.content-wrapper -->
 
+                                    
+                           
+                        </div>
+                    </div><!-- Row -->
+<!-- Agrega este código JavaScript en tu vista 'formulario_venta.php' -->
 
-        

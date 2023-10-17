@@ -47,13 +47,6 @@
             return $this->db->get();
         }
 
-        public function realizarventa()
-        {
-            $this->db->select('*');
-            $this->db->from('producto');
-           $this->db->where('estado','1');
-            return $this->db->get();
-        }
 
         //crud fraterno ---------------
         public function agregarfraterno($data)

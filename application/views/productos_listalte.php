@@ -10,59 +10,23 @@
                         </ol>
                     </div>
                 </div>
+    <div id="main-wrapper">
                 <DIV>
-                <br>
-                <a href="<?php echo base_url();?>index.php/fraterno/agregar">
-                    <button type="button" class="btn btn-primary">CREAR FRATERNO</button>
-                </a>
-                <a href="<?php echo base_url();?>index.php/fraterno/agregaractividad">
-                    <button type="button" class="btn btn-primary">CREAR ACTIVIDAD</button>
-                </a>
                 <a href="<?php echo base_url();?>index.php/fraterno/agregarproducto">
                     <button type="button" class="btn btn-primary">CREAR PRODUCTO</button>
                 </a>
-            </DIV>   
-            <DIV> 
-                <br>
-                <a href="<?php echo base_url(); ?>index.php/fraterno/indexadm">
-                  <button type="button" class="btn btn-primary">LISTA DE FRATERNOS</button>
-                </a>
+                </DIV>   
+                <DIV> 
                 <a href="<?php echo base_url(); ?>index.php/fraterno/deshabilitados">
-                  <button type="button" class="btn btn-primary">LISTA DESHABILITADOS</button>
+                  <button type="button" class="btn btn-secondary">ver productos deshabilitados</button>
                 </a>
-                <a href="<?php echo base_url(); ?>index.php/fraterno/actividades">
-                  <button type="button" class="btn btn-primary">LISTA ACTIVIDADES</button>
-                </a>
-            </DIV>
-            <div>
-              <br>
-                <a href="<?php echo base_url(); ?>index.php/fraterno/venta">
-                  <button type="button" class="btn btn-primary">REALIZAR VENTA</button>
-                </a>
-                <a href="<?php echo base_url(); ?>index.php/fraterno/actividades">
-                  <button type="button" class="btn btn-primary">VER ACTIVIDAD</button>
-                </a>
-            </DIV>
-            <DIV>
-            <div>
-            <br>
-                <a href="<?php echo base_url(); ?>index.php/fraterno/indexlte">
-                    <button type="button" class="btn btn-warning">IR HOME</button>
-                </a>
-                
-                <a href="<?php echo base_url(); ?>index.php/usuario/logout">
-                  <button type="button" class="btn btn-warning">CERRAR SESION</button>
-                </a>
-              </div>
-                <div>
+                </DIV>
+         <!--    <div>
                   <br>
                 <a href="<?php echo base_url();?>index.php/estdudiantelistaxls2" target="blank">
                 <button type="submit" class="btn btn-success">REPORTE EXCEL</button>        
                 </a>
-                </div>
-                </div>
-            <br>
-                <div id="main-wrapper">
+            </div> -->
                     <div class="row">
                         <div class="col-md-12">
                             <div class="panel panel-white">
@@ -107,7 +71,7 @@
                                     <input type="hidden" name="idProducto" value="<?php echo $row->idProducto;?>">
                                     <!--Se ocupa el rol hidden para ocultar los id en la página-->
 
-                                    <button type="submit" class="btn btn-primary">modificar</button>
+                                    <button type="submit" class="btn btn-success">modificar</button>
                                 <?php
                                     echo form_close()
                                 ?> 
@@ -140,8 +104,8 @@
                     $indice++;
                     }
                     ?>
-                            </tbody>
-                        </table>
+                    </tbody>
+                    </table>
                     </div>
                 </div>
             </div>

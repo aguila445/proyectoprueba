@@ -1,5 +1,22 @@
 <?php
 class Venta_model extends CI_Model {
+
+    public function listaventas()
+    {
+        $this->db->select('*');
+        $this->db->from('ventas');
+       $this->db->where('estado','1');
+        return $this->db->get();
+    }
+
+    public function realizarventa()
+    {
+        $this->db->select('*');
+        $this->db->from('ventas');
+       $this->db->where('estado','1');
+        return $this->db->get();
+    }
+
     public function agregar_venta($venta_data) {
         // Inserta los datos en la tabla 'ventas'
         $this->db->insert('ventas', $venta_data);
@@ -19,15 +36,7 @@ class Venta_model extends CI_Model {
         $this->db->update('producto', array('cantidad' => $nueva_cantidad));
     }
 
-    public function listaventas()
-    {
-        $this->db->select('*');
-        $this->db->from('ventas');
-       $this->db->where('estado','1');
-        return $this->db->get();
-    }
-    
-    public function buscar_productos($producto) {
+        public function buscar_productos($producto) {
         // Realiza la búsqueda de productos en la base de datos
         $this->db->like('nombreProducto', $producto);
         $this->db->select('nombreProducto, precio');
