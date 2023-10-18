@@ -1,98 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PROTOTIPO Log in</title>
+<html>
+    <head>
+        
+        <!-- Title -->
+        <title>MI WEB|Login - Sign in</title>
+        
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta charset="UTF-8">
+        <meta name="description" content="Admin Dashboard Template" />
+        <meta name="keywords" content="admin,dashboard" />
+        <meta name="author" content="Steelcoders" />
+        
+        <!-- Styles -->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+        <link href="<?php echo base_url();?>adminlte/assets/plugins/pace-master/themes/blue/pace-theme-flash.css" rel="stylesheet"/>
+        <link href="<?php echo base_url();?>adminlte/assets/plugins/uniform/css/uniform.default.min.css" rel="stylesheet"/>
+        <link href="<?php echo base_url();?>adminlte/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="<?php echo base_url();?>adminlte/assets/plugins/fontawesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
+        <link href="<?php echo base_url();?>adminlte/assets/plugins/line-icons/simple-line-icons.css" rel="stylesheet" type="text/css"/>	
+        <link href="<?php echo base_url();?>adminlte/assets/plugins/offcanvasmenueffects/css/menu_cornerbox.css" rel="stylesheet" type="text/css"/>	
+        <link href="<?php echo base_url();?>adminlte/assets/plugins/waves/waves.min.css" rel="stylesheet" type="text/css"/>	
+        <link href="<?php echo base_url();?>adminlte/assets/plugins/switchery/switchery.min.css" rel="stylesheet" type="text/css"/>
+        <link href="<?php echo base_url();?>adminlte/assets/plugins/3d-bold-navigation/css/style.css" rel="stylesheet" type="text/css"/>	
+        
+        <!-- Theme Styles -->
+        <link href="<?php echo base_url();?>adminlte/assets/css/modern.min.css" rel="stylesheet" type="text/css"/>
+        <link href="<?php echo base_url();?>adminlte/assets/css/themes/green.css" class="theme-color" rel="stylesheet" type="text/css"/>
+        <link href="<?php echo base_url();?>adminlte/assets/css/custom.css" rel="stylesheet" type="text/css"/>
+        
+        <script src="<?php echo base_url();?>adminlte/assets/plugins/3d-bold-navigation/js/modernizr.js"></script>
+        <script src="<?php echo base_url();?>adminlte/assets/plugins/offcanvasmenueffects/js/snap.svg-min.js"></script>
+        
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        
+    </head>
+    <body class="page-login">
+        <main class="page-content">
+            <div class="page-inner">
+                <div id="main-wrapper">
+                    <div class="row">
+                        <div class="col-md-3 center">
+                      <?php
+                      echo form_open_multipart('usuario/validarusuario',array('id'=>'form1','class'=>'needs-validation','method'=>'post'));
+                      ?>
 
-  <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="<?php echo base_url();?>adminlte/plugins/fontawesome-free/css/all.min.css">
-  <!-- icheck bootstrap -->
-  <link rel="stylesheet" href="<?php echo base_url();?>adminlte/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="<?php echo base_url();?>adminlte/dist/css/adminlte.min.css">
-</head>
-<body class="hold-transition login-page">
-<div class="login-box">
-  <div class="login-logo">
-    <a href="../../index2.html"><b>SISTEMA</b>WEB</a>
-  </div>
-  <!-- /.login-logo -->
-  <div class="card">
-    <div class="card-body login-card-body">
-      <p class="login-box-msg">INICIO DE SESION</p>
-      <!-- inicioooo para cambiar -->
-<?php
-echo form_open_multipart('usuario/validarusuario',array('id'=>'form1','class'=>'needs-validation','method'=>'post'));
-?>
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="login" name="login">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-envelope"></span>
-            </div>
-          </div>
-        </div>
+                            <div class="login-box">
+                                <a href="index.html" class="logo-name text-lg text-center">SALAY BOLIVIA</a>
+                                <hr style="border: 1px solid red; width: 260px; margin: 0 2px;">
+                                <hr style="border: 1px solid yellow; width: 260px; margin: 0 2px;">
+                                <hr style="border: 1px solid green; width: 260px; margin: 0 2px;">
+                                <p class="text-center m-t-md">ingrese su login y su contraseña</p>
+                                <form class="m-t-md" action="index.html">
+                                    <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="login" name="login">
+                                    </div>
+                                    <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Password" name="password">
+                                    </div>
+                                    <button type="submit" class="btn btn-success btn-block">INGRESAR</button>
+                                    <a href="forgot.html" class="display-block text-center m-t-md text-sm">Forgot Password?</a>
+                                    <p class="text-center m-t-xs text-sm">Do not have an account?</p>
+                                    <a href="register.html" class="btn btn-default btn-block m-t-md">Create an account</a>
+                                </form>
+                                <p class="text-center m-t-xs text-sm">2023 &copy; Modern by Steelcoders.</p>
+                            </div>
+                          <?php
+                          echo form_close();
+                          ?>
 
-        <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password" name="password">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-lock"></span>
-            </div>
-          </div>
-        </div>
+                        </div>
+                    </div><!-- Row -->
+                </div><!-- Main Wrapper -->
+            </div><!-- Page Inner -->
+        </main><!-- Page Content -->
+	
 
-        <div class="row">
-          <div class="col-8">
-            <div class="icheck-primary">
-              <input type="checkbox" id="remember">
-              <label for="remember">
-                Remember Me
-              </label>
-            </div>
-          </div>
-
-          <!-- /.col -->
-          <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
-          </div>
-          <!-- /.col -->
-        </div>
-<?php
-echo form_close();
-?>
-      <!-- fin de cambio -->
-      <div class="social-auth-links text-center mb-3">
-        <p>- OR -</p>
-        <p class="mb-1">
-    <a href="<?php echo base_url('application/views/menu.php'); ?>">¿Olvidaste tu contraseña?</a>
-</p>
-        <a href="#" class="btn btn-block btn-danger">
-          <i class="fab fa-google-plus mr-2"></i> deshabilitado
-        </a>
-      </div>
-      <!-- /.social-auth-links -->
-
-      <p class="mb-1">
-    <a href="<?php echo base_url('index.php/usuario/recuperar_password'); ?>">¿Olvidaste tu contraseña?</a>
-</p>
-<p class="mb-0">
-    <a href="<?php echo base_url('index.php/usuario/registrar'); ?>" class="text-center">Registrar nuevo usuario</a>
-</p>
-    </div>
-    <!-- /.login-card-body -->
-  </div>
-</div>
-<!-- /.login-box -->
-
-<!-- jQuery -->
-<script src="<?php echo base_url();?>adminlte/plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="<?php echo base_url();?>adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- AdminLTE App -->
-<script src="<?php echo base_url();?>adminlte/dist/js/adminlte.min.js"></script>
-</body>
+        <!-- Javascripts -->
+        <script src="<?php echo base_url();?>adminlte/assets/plugins/jquery/jquery-2.1.4.min.js"></script>
+        <script src="<?php echo base_url();?>adminlte/assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+        <script src="<?php echo base_url();?>adminlte/assets/plugins/pace-master/pace.min.js"></script>
+        <script src="<?php echo base_url();?>adminlte/assets/plugins/jquery-blockui/jquery.blockui.js"></script>
+        <script src="<?php echo base_url();?>adminlte/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <script src="<?php echo base_url();?>adminlte/assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+        <script src="<?php echo base_url();?>adminlte/assets/plugins/switchery/switchery.min.js"></script>
+        <script src="<?php echo base_url();?>adminlte/assets/plugins/uniform/jquery.uniform.min.js"></script>
+        <script src="<?php echo base_url();?>adminlte/assets/plugins/offcanvasmenueffects/js/classie.js"></script>
+        <script src="<?php echo base_url();?>adminlte/assets/plugins/waves/waves.min.js"></script>
+        <script src="<?php echo base_url();?>adminlte/assets/js/modern.min.js"></script>
+        
+    </body>
 </html>
