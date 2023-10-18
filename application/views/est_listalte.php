@@ -1,7 +1,7 @@
 <!-- Content Wrapper. Contains page content -->
 <div class="page-inner">
                 <div class="page-title">
-                    <h3>FRATERNOS</h3>
+                    <h3>PRINCIPAL</h3>
                     <div class="page-breadcrumb">
                         <ol class="breadcrumb">
                             <li><a href="index.html">Home</a></li>

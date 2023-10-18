@@ -106,9 +106,9 @@
                     ?>
                     </tbody>
                     </table>
-                    </div>
                 </div>
             </div>
         </div>
-    </div><!-- Row -->
+    </div>
+</div><!-- Row -->
 </div><!-- Main Wrapper -->

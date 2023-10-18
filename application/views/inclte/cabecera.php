@@ -4,7 +4,7 @@
     <head>
         
         <!-- Title -->
-        <title>MI WEB | Admin Dashboard Template</title>
+        <title>WEB| SALAY BOLIVIA</title>
         
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
         <meta charset="UTF-8">
@@ -71,6 +71,7 @@
                 <a href="<?php echo base_url();?>adminlte/javascript:void(0);" class="showRight2"><img src="<?php echo base_url();?>adminlte/assets/images/avatar5.png" alt=""><span>Nick Doe<small>Hi! How're you?</small></span></a>
             </div>
 		</nav>
+        <
         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
             <h3><span class="pull-left">Sandra Smith</span> <a href="javascript:void(0);" class="pull-right" id="closeRight2"><i class="fa fa-angle-right"></i></a></h3>
             <div class="slimscroll chat">
@@ -123,15 +124,16 @@
         <div class="menu-wrap">
             <nav class="profile-menu">
                 <div class="profile"><img src="<?php echo base_url();?>adminlte/assets/images/profile-menu-image.png" width="60" alt="David Green"/><span>viva el salay</span></div>
-                <div class="profile-menu-list">
+         <!--       <div class="profile-menu-list">
                     <a href="#"><i class="fa fa-star"></i><span>Favorites</span></a>
                     <a href="#"><i class="fa fa-bell"></i><span>Alerts</span></a>
                     <a href="#"><i class="fa fa-envelope"></i><span>Messages</span></a>
                     <a href="#"><i class="fa fa-comment"></i><span>Comments</span></a>
-                </div>
+                </div> -->
             </nav>
             <button class="close-button" id="close-button">Close Menu</button>
         </div>
+        
         <form class="search-form" action="#" method="GET">
             <div class="input-group">
                 <input type="text" name="search" class="form-control search-input" placeholder="Search...">

@@ -10,7 +10,6 @@ class Fraterno extends CI_Controller
         {
           //  $lista=$this->fraterno_model->listafraterno();
            // $data['fraterno']=$lista;
-    
             $this ->load->view('inclte/cabecera');
             $this ->load->view('inclte/menulateral');
             $this ->load->view('inclte/menusuperior');
@@ -20,8 +19,7 @@ class Fraterno extends CI_Controller
         else
         {
             redirect('usuario/index','refresh');
-        }
-        
+        }   
     }
 
     public function encargadolte()
@@ -29,7 +27,7 @@ class Fraterno extends CI_Controller
         if ($this->session->userdata('login')) {
             $this ->load->view('inclte/cabecera');
             $this ->load->view('inclte/menusuperior');
-            $this ->load->view('inclte/menulateral');
+            $this ->load->view('inclte/menulateral_encargado');
             $this->load->view('est_encargado');
             $this->load->view('inclte/pie');
         } else {
@@ -42,7 +40,7 @@ class Fraterno extends CI_Controller
         if ($this->session->userdata('login')) {
             $this ->load->view('inclte/cabecera');
             $this ->load->view('inclte/menusuperior');
-            $this ->load->view('inclte/menulateral');
+            $this ->load->view('inclte/menulateral_fraterno');
             $this->load->view('est_invitado');
             $this->load->view('inclte/pie');
         } else {
@@ -83,7 +81,7 @@ class Fraterno extends CI_Controller
 		
 	}
 
-        //vista de actividades
+        //vista de actividades de adm, encargado y fraterno
         public function actividades()
         {
             $lista=$this->fraterno_model->listaactividades();
@@ -91,6 +89,30 @@ class Fraterno extends CI_Controller
     
             $this ->load->view('inclte/cabecera');
             $this ->load->view('inclte/menulateral');
+            $this ->load->view('inclte/menusuperior');
+            $this->load->view('actividades_listalte',$data);
+            $this ->load->view('inclte/pie');
+            
+        }
+        public function actividadesencargado()
+        {
+            $lista=$this->fraterno_model->listaactividades();
+            $data['actividad']=$lista;
+    
+            $this ->load->view('inclte/cabecera');
+            $this ->load->view('inclte/menulateral_encargado');
+            $this ->load->view('inclte/menusuperior');
+            $this->load->view('actividades_listalte',$data);
+            $this ->load->view('inclte/pie');
+            
+        }
+        public function actividadesfarterno()
+        {
+            $lista=$this->fraterno_model->listaactividades();
+            $data['actividad']=$lista;
+    
+            $this ->load->view('inclte/cabecera');
+            $this ->load->view('inclte/menulateral_fraterno');
             $this ->load->view('inclte/menusuperior');
             $this->load->view('actividades_listalte',$data);
             $this ->load->view('inclte/pie');
@@ -110,7 +132,7 @@ class Fraterno extends CI_Controller
 		
 	}
 
-        //vista de productos
+        //vista de productos adm, encargado y fraterno
         public function productos()
         {
             $lista=$this->fraterno_model->listaproductos();
@@ -118,6 +140,30 @@ class Fraterno extends CI_Controller
     
             $this ->load->view('inclte/cabecera');
             $this ->load->view('inclte/menulateral');
+            $this ->load->view('inclte/menusuperior');
+            $this->load->view('productos_listalte',$data);
+            $this ->load->view('inclte/pie');
+            
+        }
+        public function productosencargado()
+        {
+            $lista=$this->fraterno_model->listaproductos();
+            $data['producto']=$lista;
+    
+            $this ->load->view('inclte/cabecera');
+            $this ->load->view('inclte/menulateral_encargado');
+            $this ->load->view('inclte/menusuperior');
+            $this->load->view('productos_listalte',$data);
+            $this ->load->view('inclte/pie');
+            
+        }
+        public function productosfraterno()
+        {
+            $lista=$this->fraterno_model->listaproductos();
+            $data['producto']=$lista;
+    
+            $this ->load->view('inclte/cabecera');
+            $this ->load->view('inclte/menulateral_fraterno');
             $this ->load->view('inclte/menusuperior');
             $this->load->view('productos_listalte',$data);
             $this ->load->view('inclte/pie');

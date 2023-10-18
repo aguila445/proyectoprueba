@@ -60,6 +60,7 @@
                             <div class="panel-heading clearfix">
                                     <h4 class="panel-title">LISTA DE VENTAS</h4>
                                 </div>
+
                                 <div class="panel-body">
                                     <div class="table-responsive">
                                         <table class="table">
@@ -81,7 +82,7 @@
                                               <th>ultima actualizacion</th>
                                             </tr>
                                           </thead>
-                                            <tbody>
+                   <tbody>
                                             <?php
                     $indice=1;//CONTADOR CORRELATIVO
                         foreach($ventas->result()as $row)
@@ -104,18 +105,16 @@
                           <td><?php echo $row->estado;?></td>
                           <td><?php echo $row->fechaRegistro;?></td>
                           <td><?php echo $row->fechaActualizacion;?></td>
-
                         </tr>
                     <?php
                     $indice++;
                     }
                     ?>
-                      </tbody>
-                        </div>
-                     </div>
-                            </div>  
-                        </div>
-                     </div>
-                </div>
-                       
-        </div><!-- Row -->
+                </tbody>
+          </table>
+      </div>
+     </div>  
+    </div>
+   </div>
+ </div>                   
+</div><!-- Row -->
