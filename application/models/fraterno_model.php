@@ -16,6 +16,12 @@
             return $this->db->get();
         }
 
+        public function listafraternototal()
+        {
+            $this->db->select('*');
+            $this->db->from('fraterno');
+            return $this->db->get();
+        }
 
         public function listaactividades()
         {
@@ -29,6 +35,12 @@
             $this->db->select('*');
             $this->db->from('actividad');
            $this->db->where('estado','0');
+            return $this->db->get();
+        }
+        public function listaactividadestotal()
+        {
+            $this->db->select('*');
+            $this->db->from('actividad');
             return $this->db->get();
         }
 
@@ -46,7 +58,13 @@
            $this->db->where('estado','0');
             return $this->db->get();
         }
-
+        public function listaproductostotal()
+        {
+            $this->db->select('*');
+            $this->db->from('producto');
+           $this->db->where('estado','1');
+            return $this->db->get();
+        }
 
         //crud fraterno ---------------
         public function agregarfraterno($data)

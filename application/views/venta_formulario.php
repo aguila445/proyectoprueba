@@ -21,8 +21,8 @@
                         <a href="<?php echo base_url(); ?>index.php/venta/ventas" style="float: right;">
                         <button type="button" class="btn btn-primary">IR A LISTA DE VENTAS</button>
                         </a>
-
                         </div>
+                        
                         <div class="col-md-12">
                         <div class="panel-body" class="table-responsive" >
                             <?php echo form_open_multipart('fraterno/agregardb'); ?>
