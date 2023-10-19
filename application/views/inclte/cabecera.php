@@ -36,7 +36,9 @@
         
         <script src="<?php echo base_url();?>adminlte/assets/plugins/3d-bold-navigation/js/modernizr.js"></script>
         <script src="<?php echo base_url();?>adminlte/assets/plugins/offcanvasmenueffects/js/snap.svg-min.js"></script>
-        
+        <!-- para los models en repporte-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>

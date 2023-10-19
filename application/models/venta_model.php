@@ -45,5 +45,23 @@ class Venta_model extends CI_Model {
         return $query->result();
     }
     
-    
+    public function obtener_lista_productos() {
+        $this->db->select('nombreProducto, precio, talla');
+        $this->db->from('productos');
+        $query = $this->db->get();
+        return $query->result();
+    }
+    public function obtener_lista_actividades() {
+        $this->db->select('nombreActividad, fechaRealizacion');
+        $this->db->from('actividades');
+        $query = $this->db->get();
+        return $query->result();
+    }
+    public function obtener_lista_ventas() {
+        $this->db->select('nombreProducto, cantidad, precio, totalCobrado, nombreFraterno, usuarioVenta');
+        $this->db->from('ventas');
+        $query = $this->db->get();
+        return $query->result();
+    }
+            
 }

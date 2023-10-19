@@ -31,6 +31,8 @@
                     <br>
                     <input type="text" name="lugar" id="" placeholder="Escriba el lugar del evento" class="form-control">
                     <br>
+                    <input type="text" name="precio" id="" placeholder="Escriba el precio del evento" class="form-control">
+                    <br>
                     <button type="submit" class="btn btn-primary">AGREGAR</button>
                 <?php
                 echo form_close()

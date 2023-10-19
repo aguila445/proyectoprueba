@@ -39,6 +39,15 @@
                    <input type="text" name="segundoApellido" id="" placeholder="Escriba segundo apellido" class="form-control">
                   <BR> 
                   </div> 
+                  <div>
+                   <input type="text" name="email" id="" placeholder="Escriba el email" class="form-control">
+                   </div>
+                   <div>
+                   <input type="text" name="telefono" id="" placeholder="Escriba el telefono" class="form-control">
+                   </div>
+                   <div>
+                   <input type="text" name="direccion" id="" placeholder="Escriba la direccion" class="form-control">
+                   </div>
                    <div>
                    <input type="text" name="nota" id="" placeholder="Escriba si el fraterno 'debe' o 'no debe'" class="form-control">
                    </div>

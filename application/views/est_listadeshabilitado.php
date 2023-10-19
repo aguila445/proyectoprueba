@@ -39,8 +39,11 @@
                         <th>n°</th>
                         <th>nombre</th>
                         <th>primer apellido</th>
-                        <th>segundo apellido </th>
-                        <th>nota </th>
+                        <th>segundo apellido</th>
+                        <th>email</th>
+                        <th>telefono</th>
+                        <th>direccion</th>
+                        <th>nota</th>
                         <th>Habilitar</th>
                     </tr>
                   </thead>
@@ -55,10 +58,13 @@
                         <td><?php echo $row->nombre;?></td>
                         <td><?php echo $row->primerApellido;?></td>
                         <td><?php echo $row->segundoApellido;?></td>
+                        <td><?php echo $row->email;?></td>
+                        <td><?php echo $row->telefono;?></td>
+                        <td><?php echo $row->direccion;?></td>
                         <td><?php echo $row->nota;?></td>
                         <td>
                             <?php
-                                echo form_open_multipart('fraterno/habilitarbd');
+                                echo form_open_multipart('fraterno/habilitardb');
                             ?>
                                 <input type="hidden" name="idFraterno" value="<?php echo $row->idFraterno; ?>">
                                 <button type="submit" class="btn btn-warning">HABILITAR</button>        

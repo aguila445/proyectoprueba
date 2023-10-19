@@ -45,6 +45,9 @@
                     <input type="text" name="nombre" id="" placeholder="Escriba el nombre" class="form-control" value="<?php echo $row->nombre;?>">
                     <input type="text" name="primerApellido" id="" placeholder="Escriba el primer apellido" class="form-control" value="<?php echo $row->primerApellido;?>">
                     <input type="text" name="segundoApellido" id="" placeholder="Escriba el segundo apellido" class="form-control" value="<?php echo $row->segundoApellido;?>">
+                    <input type="text" name="email" id="" placeholder="Escriba si el email" class="form-control" value="<?php echo $row->email;?>">
+                    <input type="text" name="telefono" id="" placeholder="Escriba si el telefono" class="form-control" value="<?php echo $row->telefono?>">
+                    <input type="text" name="direccion" id="" placeholder="Escriba la direccion" class="form-control" value="<?php echo $row->direccion?>">
                     <input type="text" name="nota" id="" placeholder="Escriba si el fraterno debe o no" class="form-control" value="<?php echo $row->nota;?>">
 
                 <?php

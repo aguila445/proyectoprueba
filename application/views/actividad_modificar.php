@@ -39,12 +39,22 @@
                     echo form_open_multipart('fraterno/modificaractividaddb')
                 ?>
                     <div>
+                  <br>
                     <button type="submit" class="btn btn-primary">modificar</button>
-                    </div>
+                    
+                  </div>
+                    <br>
                     <input type="hidden" name="idActividad" id=""class="form-control" value="<?php echo $row->idActividad;?>">
+                    <br>
                     <input type="text" name="nombre" id="" placeholder="Escriba la actividad" class="form-control" value="<?php echo $row->nombre;?>">
+                    <br>
                     <input type="date" name="fecha" id="" placeholder="Escriba fecha" class="form-control" value="<?php echo $row->fecha;?>">
+                    <br>
                     <input type="text" name="lugar" id="" placeholder="Escriba el lugar" class="form-control" value="<?php echo $row->lugar;?>">
+                    <br>
+                    <input type="text" name="precio" id="" placeholder="Escriba el precio" class="form-control" value="<?php echo $row->precio;?>">
+              <br>
+              <br>
               <?php
                   echo form_close();
                 }

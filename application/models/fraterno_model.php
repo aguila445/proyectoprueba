@@ -138,10 +138,11 @@
             return $this->db->get();
         }
 
-        public function getProductByRopaAndTalla($ropa, $talla)
+        public function getProductByNombreProductoAndTalla($nombreProducto, $talla)
         {
-         return $this->db->get_where('producto', array('ropa' => $ropa, 'talla' => $talla))->row();
+            return $this->db->get_where('producto', array('nombreProducto' => $nombreProducto, 'talla' => $talla))->row();
         }
+        
 
         public function actualizarProducto($idProducto, $data)
         {

@@ -72,8 +72,8 @@
                 </a>
                 </div>
                 <div>
-                <a href="<?php echo base_url();?>index.php/estdudiantelistaxls2" target="blank">
-                <button type="submit" class="btn btn-success">REPORTE EXCEL</button>        
+                <a href="<?php echo base_url();?>index.php/venta/reportes" >
+                <button type="submit" class="btn btn-success">REPORTES</button>        
                 </a>
                 </div>
               

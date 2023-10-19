@@ -295,27 +295,27 @@ class Fraterno extends CI_Controller
         $this ->load->view('inclte/pie');
     }
     public function agregarproductodb()
-    {
-        $data['nombreProducto'] = $_POST['nombreProducto'];
-        $data['ropa'] = $_POST['ropa'];
-        $data['precio'] = $_POST['precio'];
-        $data['talla'] = $_POST['talla'];
-        $data['cantidad'] = $_POST['cantidad'];
-    
-        // Verificar si ya existe un producto con la misma ropa y talla
-        $existingProduct = $this->fraterno_model->getProductByRopaAndTalla($data['ropa'], $data['talla']);
-    
-        if ($existingProduct) {
-            // Si existe, actualiza la cantidad sumando la cantidad actual
-            $data['cantidad'] += $existingProduct->cantidad;
-            $this->fraterno_model->actualizarProducto($existingProduct->idProducto, $data);
-        } else {
-            // Si no existe, inserta un nuevo producto
-            $this->fraterno_model->agregarproducto($data);
-        }
-    
-        redirect('fraterno/indexlte', 'refresh');
+{
+    $data['nombreProducto'] = $_POST['nombreProducto']; // Cambiado de 'ropa' a 'nombreProducto'
+    $data['precio'] = $_POST['precio'];
+    $data['talla'] = $_POST['talla'];
+    $data['cantidad'] = $_POST['cantidad'];
+
+    // Verificar si ya existe un producto con el mismo nombreProducto y talla
+    $existingProduct = $this->fraterno_model->getProductByNombreProductoAndTalla($data['nombreProducto'], $data['talla']);
+
+    if ($existingProduct) {
+        // Si existe, actualiza la cantidad sumando la cantidad actual
+        $data['cantidad'] += $existingProduct->cantidad;
+        $this->fraterno_model->actualizarProducto($existingProduct->idProducto, $data);
+    } else {
+        // Si no existe, inserta un nuevo producto
+        $this->fraterno_model->agregarproducto($data);
     }
+
+    redirect('fraterno/indexlte', 'refresh');
+}
+
     
     public function modificarproducto()
     {
@@ -341,7 +341,7 @@ class Fraterno extends CI_Controller
 
         redirect('fraterno/indexlte','refresh');
     }
-    public function deshabilitarproductobd()
+    public function deshabilitarproductodb()
     {
         $idProducto=$_POST['idProducto'];
         $data['estado']='0';
@@ -410,12 +410,12 @@ class Fraterno extends CI_Controller
         $data['nombre']=$_POST['nombre'];
         $data['fecha']=$_POST['fecha'];
         $data['lugar']=$_POST['lugar'];
+        $data['precio']=$_POST['precio'];
         
-
         $this->fraterno_model->modificaractividad($idActividad,$data);
         redirect('fraterno/actividades','refresh');
     }
-    public function deshabilitaractividadbd()
+    public function deshabilitaractividaddb()
     {
         $idActividad=$_POST['idActividad'];
         $data['estado']='0';
@@ -423,7 +423,7 @@ class Fraterno extends CI_Controller
         $this->fraterno_model->modificaractividaddb($idActividad,$data);
         redirect('fraterno/actividades','refresh');
     }
-    public function habilitaractividadbd()
+    public function habilitaractividaddb()
     {
         $idActividad=$_POST['idActividad'];
         $data['estado']='1';

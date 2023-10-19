@@ -47,8 +47,8 @@
                 </a>
                 </div>
                 <div>
-                <a href="<?php echo base_url();?>index.php/estdudiantelistaxls2" target="blank">
-                <button type="submit" class="btn btn-success">REPORTE EXCEL</button>        
+                <a href="<?php echo base_url();?>index.php/venta/reportes" target="blank">
+                <button type="submit" class="btn btn-success">REPORTES</button>        
                 </a>
                 </div>
               
@@ -67,19 +67,12 @@
                                             <thead>
                                             <tr>
                                               <th>n°</th> 
-                                              <th>id del cliente</th>
                                               <th>id del producto</th>
-                                              <th>id del sucursal</th>
                                               <th>id del fraterno</th>
-                                              <th>id actividad</th>
                                               <th>cantidad de producto</th>
-                                              <td>adelanto de pago</td>
-                                              <th>total de venta</th>
-                                              <th>saldo a pagar</th>
+                                              <th>venta total</th>
                                               <th>ciudad</th>
-                                              <th>estado</th>
-                                              <th>fecha de registro</th>
-                                              <th>ultima actualizacion</th>
+                                              
                                             </tr>
                                           </thead>
                    <tbody>
@@ -92,19 +85,12 @@
                          ?>
                         <tr>
                           <td><?php echo $indice;?></td>
-                          <td><?php echo $row->idCliente;?></td>
                           <td><?php echo $row->idProducto;?></td>
-                          <td><?php echo $row->idSucursal;?></td>
                           <td><?php echo $row->idFraterno;?></td>
-                          <td><?php echo $row->idActividad;?></td>
                           <td><?php echo $row->cantidad;?></td>
-                          <td><?php echo $row->adelanto;?></td>
-                          <td><?php echo $row->total;?></td>
-                          <td><?php echo $row->saldo;?></td>
+                          <td><?php echo $row->ventaTotal;?></td>ñ
                           <td><?php echo $row->ciudad;?></td>
-                          <td><?php echo $row->estado;?></td>
-                          <td><?php echo $row->fechaRegistro;?></td>
-                          <td><?php echo $row->fechaActualizacion;?></td>
+                          
                         </tr>
                     <?php
                     $indice++;

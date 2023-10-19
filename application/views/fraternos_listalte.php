@@ -50,6 +50,9 @@
                                               <th>nombre</th>
                                               <th>primer ap.</th>
                                               <th>segundo ap. </th>
+                                              <th>email</th>
+                                              <th>telefono</th>
+                                              <th>direccion</th>
                                               <th>nota</th>
                                               <th>foto</th>
                                               <th>Modificar</th>
@@ -70,6 +73,9 @@
                           <td><?php echo $row->nombre;?></td>
                           <td><?php echo $row->primerApellido;?></td>
                           <td><?php echo $row->segundoApellido;?></td>
+                          <td><?php echo $row->email;?></td>
+                          <td><?php echo $row->telefono;?></td>
+                          <td><?php echo $row->direccion;?></td>
                           <td><?php echo $row->nota;?></td>
      
                           <!--Se ocupa subir fotos-->

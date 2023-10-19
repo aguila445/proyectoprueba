@@ -51,6 +51,7 @@
                                               <th>actividad</th>
                                               <th>fecha</th>
                                               <th>lugar </th>
+                                              <th>precio </th>
                                               <th>Modificar</th>
                                               <th>Deshabilitar</th>
                                               <th>Eliminar</th>
@@ -69,7 +70,7 @@
                           <td><?php echo $row->nombre;?></td>
                           <td><?php echo $row->fecha;?></td>
                           <td><?php echo $row->lugar;?></td>                       
-
+                          <td><?php echo $row->precio;?></td>
                           <!-- <td> <!?php echo formatearFecha($row->creado);?></td> -->
                           <td>
                                 <?php
