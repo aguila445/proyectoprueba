@@ -1,63 +1,55 @@
-<!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>LISTA DE FRATERNOS</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">DataTables</li>
-            </ol>
-          </div>
-        </div>
-      </div><!-- /.container-fluid -->
-    </section>
-
-    <!-- Main content -->
-    <section class="content">
+<!-- Page Sidebar -->
+<div class="page-inner">
+                <div class="checkout">        
+                </div>
+                <div class="page-title">
+                    <h3>MODIFICAR ACTIVIDAD</h3>
+                    <div class="page-breadcrumb">
+                        <ol class="breadcrumb">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#">Extra</a></li>
+                            <li class="active">Shop</li>
+                        </ol>
+                    </div>
+                </div>
+                <div id="main-wrapper">
+  <!-- Main content -->
+  <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-12">
-            <div class="card">
-              <div class="card-header">
-                <h3 class="card-title"> MODIFICAR ACTIVIDAD</h3>
-                <br>
-                <a href="<?php echo base_url(); ?>index.php/fraterno/indexlte">
-                    <button type="button" class="btn btn-warning">IR HOME</button>
-                </a>
-              </div>
+          <div class="col-md-8">
+           
+                
               <!-- /.card-header -->
               <div class="card-body">
-              <!-- /todo depues del body -->
                 <?php
-                foreach($infActividad->result()as $row)
-                {
-                    echo form_open_multipart('fraterno/modificaractividaddb')
+                    echo form_open_multipart('fraterno/modificaractividaddb') 
+                ?> 
+                 <div>
+    <label for="nombre">Nombre de la actividad:</label>
+    <input type="text" name="nombre" id="nombre" placeholder="Escriba la actividad" class="form-control">
+</div>
+<div>
+    <label for="fecha">Fecha del evento:</label>
+    <input type="date" name="fecha" id="fecha" class="form-control">
+</div>
+<div>
+    <label for="lugar">Lugar del evento:</label>
+    <input type="text" name="lugar" id="lugar" placeholder="Escriba el lugar del evento" class="form-control">
+</div>
+<div>
+    <label for="precio">Precio del evento:</label>
+    <input type="text" name="precio" id="precio" placeholder="Escriba el precio del evento" class="form-control">
+</div>
+<div>
+    <br>
+    <button type="submit" class="btn btn-primary">MODIFICAR</button>
+</div>
+     <?php
+                echo form_close()
                 ?>
-                    <div>
-                  <br>
-                    <button type="submit" class="btn btn-primary">modificar</button>
-                    
-                  </div>
-                    <br>
-                    <input type="hidden" name="idActividad" id=""class="form-control" value="<?php echo $row->idActividad;?>">
-                    <br>
-                    <input type="text" name="nombre" id="" placeholder="Escriba la actividad" class="form-control" value="<?php echo $row->nombre;?>">
-                    <br>
-                    <input type="date" name="fecha" id="" placeholder="Escriba fecha" class="form-control" value="<?php echo $row->fecha;?>">
-                    <br>
-                    <input type="text" name="lugar" id="" placeholder="Escriba el lugar" class="form-control" value="<?php echo $row->lugar;?>">
-                    <br>
-                    <input type="text" name="precio" id="" placeholder="Escriba el precio" class="form-control" value="<?php echo $row->precio;?>">
-              <br>
-              <br>
-              <?php
-                  echo form_close();
-                }
+                <?php    
+                // </form>
                 ?>
               </div>
               <!-- /.card-body -->
@@ -70,6 +62,6 @@
       </div>
       <!-- /.container-fluid -->
     </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
+                           
+                        </div>
+                        <!-- /.card-body -->

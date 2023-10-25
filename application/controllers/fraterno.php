@@ -235,6 +235,9 @@ class Fraterno extends CI_Controller
         $data['nombre']=$_POST['nombre'];
         $data['primerApellido']=$_POST['primerApellido'];// el primero es de la db y el segundo del formulario
         $data['segundoApellido']=$_POST['segundoApellido'];
+        $data['email']=$_POST['email'];
+        $data['telefono']=$_POST['telefono'];
+        $data['direccion']=$_POST['direccion'];
         $data['nota']=$_POST['nota'];
 
         $this->fraterno_model->agregarfraterno($data);//invocamos el metodo
@@ -258,6 +261,9 @@ class Fraterno extends CI_Controller
         $data['nombre']=$_POST['nombre'];
         $data['primerApellido']=$_POST['primerApellido'];
         $data['segundoApellido']=$_POST['segundoApellido'];
+        $data['email']=$_POST['email'];
+        $data['telefono']=$_POST['telefono'];
+        $data['direccion']=$_POST['direccion'];
         $data['nota']=$_POST['nota'];
 
         $this->fraterno_model->modificarfraterno($idFraterno,$data);
@@ -333,7 +339,6 @@ class Fraterno extends CI_Controller
         $idProducto=$_POST['idProducto'];
         // el primero como en base
         $data['nombreProducto']=$_POST['nombreProducto'];
-        $data['ropa']=$_POST['ropa'];
         $data['precio']=$_POST['precio'];
         $data['talla']=$_POST['talla'];
         $data['cantidad']=$_POST['cantidad'];

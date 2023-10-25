@@ -25,16 +25,27 @@
                 <?php
                     echo form_open_multipart('fraterno/agregaractividaddb') 
                 ?> 
-                    <input type="text" name="nombre" id="" placeholder="Escriba la actividad" class="form-control">
-                    <br>
-                    <input type="date" name="fecha" id="" placeholder="Escriba la fecha" class="form-control">
-                    <br>
-                    <input type="text" name="lugar" id="" placeholder="Escriba el lugar del evento" class="form-control">
-                    <br>
-                    <input type="text" name="precio" id="" placeholder="Escriba el precio del evento" class="form-control">
-                    <br>
-                    <button type="submit" class="btn btn-primary">AGREGAR</button>
-                <?php
+                 <div>
+    <label for="nombre">Nombre de la actividad:</label>
+    <input type="text" name="nombre" id="nombre" placeholder="Escriba la actividad" class="form-control">
+</div>
+<div>
+    <label for="fecha">Fecha del evento:</label>
+    <input type="date" name="fecha" id="fecha" class="form-control">
+</div>
+<div>
+    <label for="lugar">Lugar del evento:</label>
+    <input type="text" name="lugar" id="lugar" placeholder="Escriba el lugar del evento" class="form-control">
+</div>
+<div>
+    <label for="precio">Precio del evento:</label>
+    <input type="text" name="precio" id="precio" placeholder="Escriba el precio del evento" class="form-control">
+</div>
+<div>
+    <br>
+    <button type="submit" class="btn btn-primary">AGREGAR</button>
+</div>
+     <?php
                 echo form_close()
                 ?>
                 <?php    

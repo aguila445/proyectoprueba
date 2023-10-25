@@ -22,26 +22,31 @@
                 
               <!-- /.card-header -->
               <div class="card-body">
-              <?php
-                    echo form_open_multipart('fraterno/agregarproductodb') 
-                ?> 
-                    <input type="text" name="nombreProducto" id="" placeholder="Escriba el nombre del producto" class="form-control">
-                    <br>
-                    <input type="text" name="precio" id="" placeholder="Escriba precio del producto" class="form-control">
-                    <br>
-                    <input type="text" name="talla" id="" placeholder="Escoja la talla" class="form-control">
-                    <br>
-                    <input type="text" name="cantidad" id="" placeholder="Ingrese la cantidad del producto" class="form-control">
-                    
-                    <br>
-                    <button type="submit" class="btn btn-primary">AGREGAR</button>
-                <?php
-                echo form_close()
-                ?>
-                <?php    
-                // </form>
-                ?>
-              </div>
+    <?php
+    echo form_open_multipart('fraterno/agregarproductodb') 
+    ?> 
+    <div class="form-group">
+        <label for="nombreProducto">Nombre del Producto:</label>
+        <input type="text" name="nombreProducto" id="nombreProducto" placeholder="Escriba el nombre del producto" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="precio">Precio:</label>
+        <input type="text" name="precio" id="precio" placeholder="Escriba precio del producto" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="talla">Talla:</label>
+        <input type="text" name="talla" id="talla" placeholder="Escoja la talla" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="cantidad">Cantidad:</label>
+        <input type="text" name="cantidad" id="cantidad" placeholder="Ingrese la cantidad del producto" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">AGREGAR</button>
+    <?php
+    echo form_close()
+    ?>
+</div>
+
               <!-- /.card-body -->
             </div>
             <!-- /.card -->

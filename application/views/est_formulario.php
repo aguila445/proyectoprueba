@@ -26,35 +26,49 @@
                     echo form_open_multipart('fraterno/agregardb')
                 ?>
                   
-                    <div>
-                      <br>
-                    <input type="text" name="nombre" id="" placeholder="Escriba el nombre" class="form-control">
-                  <BR>  
-                  </div>
-                   <div>
-                   <input type="text" name="primerApellido" id="" placeholder="Escriba primer apellido" class="form-control">
-                  <BR> 
-                  </div>
-                   <div>
-                   <input type="text" name="segundoApellido" id="" placeholder="Escriba segundo apellido" class="form-control">
-                  <BR> 
-                  </div> 
-                  <div>
-                   <input type="text" name="email" id="" placeholder="Escriba el email" class="form-control">
-                   </div>
-                   <div>
-                   <input type="text" name="telefono" id="" placeholder="Escriba el telefono" class="form-control">
-                   </div>
-                   <div>
-                   <input type="text" name="direccion" id="" placeholder="Escriba la direccion" class="form-control">
-                   </div>
-                   <div>
-                   <input type="text" name="nota" id="" placeholder="Escriba si el fraterno 'debe' o 'no debe'" class="form-control">
-                   </div>
-                   <DIV >
-                   <br>
-                    <button type="submit" class="btn btn-primary">AGREGAR</button>
-                   </DIV> 
+                  <div class="mb-3">
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" id="nombre" placeholder="Escriba el nombre" class="form-control">
+</div>
+
+<div class="mb-3">
+    <label for="primerApellido">Primer Apellido:</label>
+    <input type="text" name="primerApellido" id="primerApellido" placeholder="Escriba primer apellido" class="form-control">
+</div>
+
+<div class="mb-3">
+    <label for="segundoApellido">Segundo Apellido:</label>
+    <input type="text" name="segundoApellido" id="segundoApellido" placeholder="Escriba segundo apellido" class="form-control">
+</div>
+
+<div class="mb-3">
+    <div class="d-inline-block col-md-6">
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email" placeholder="Escriba el email" class="form-control">
+    </div>
+
+    <div class="d-inline-block col-md-6">
+        <label for="telefono">Teléfono:</label>
+        <input type="text" name="telefono" id="telefono" placeholder="Escriba el teléfono" class="form-control">
+    </div>
+</div>
+
+<div class="mb-3">
+    <label for="direccion">Dirección:</label>
+    <input type="text" name="direccion" id="direccion" placeholder="Escriba la dirección" class="form-control">
+</div>
+
+<div class="mb-3 col-md-6">
+    <label for="nota">Nota:</label>
+    <input type="text" name="nota" id="nota" placeholder="Escriba si el fraterno 'debe' o 'no debe'" class="form-control">
+</div>
+
+<div class="mb-3 col-md-6">
+  <br>
+    <button type="submit" class="btn btn-primary">AGREGAR</button>
+</div>
+
+
                    
                 <?php
                 echo form_close()

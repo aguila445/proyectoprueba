@@ -14,6 +14,7 @@
                     </div>
                     <ul class="menu accordion-menu">
                         <li><a href="<?php echo base_url(); ?>index.php/fraterno/indexlte" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-home"></span><p>PRINCIPAL</p></a></li>
+                        <li><a href="<?php echo base_url(); ?>index.php/fraterno/indexadm" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-user"></span><p>USUARIOS</p></a></li>
                         <li><a href="<?php echo base_url(); ?>index.php/fraterno/indexadm" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-user"></span><p>FRATERNOS</p></a></li>
                         <li><a href="<?php echo base_url(); ?>index.php/fraterno/actividades" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-list"></span><p>ACTIVIDADES</p></a>
                           <!--  <ul class="sub-menu">
@@ -49,7 +50,9 @@
                             </ul> -->
                         </li>
                         <li><a href="<?php echo base_url(); ?>index.php/venta/ventas" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-gift"></span><p>VENTAS</p><!--<span class="arrow"></span> --></a>
-                         <!--   <ul class="sub-menu">
+                        <li><a href="<?php echo base_url(); ?>index.php/venta/reportes" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-gift"></span><p>REPORTES</p><!--<span class="arrow"></span> --></a>
+
+                        <!--   <ul class="sub-menu">
                                 <li><a href="table-static.html">Static Tables</a></li>
                                 <li><a href="table-responsive.html">Responsive Tables</a></li>
                                 <li><a href="table-data.html">Data Tables</a></li>
