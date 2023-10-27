@@ -3,7 +3,7 @@
 require('fpdf/fpdf.php');
 
 // Crea una instancia de TCPDF
-$pdf = new FPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+//$pdf = new FPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
 // Establece información del documento
 $pdf->SetCreator(PDF_CREATOR);
