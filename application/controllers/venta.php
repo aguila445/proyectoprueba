@@ -49,6 +49,18 @@ class Venta extends CI_Controller {
         $this ->load->view('inclte/pie');
 		
 	}
+    public function recibo()
+	{
+      //  $lista=$this->venta_model->realizarventa();
+      //  $data['fraterno']=$lista;
+
+        $this ->load->view('inclte/cabecera');
+        $this ->load->view('inclte/menulateral');
+        $this ->load->view('inclte/menusuperior');
+		$this->load->view('reporte_recibo');//,$data);
+        $this ->load->view('inclte/pie');
+		
+	}
     public function pedido()
 	{
         $lista=$this->venta_model->realizarventa();
